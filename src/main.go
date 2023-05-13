@@ -6,21 +6,30 @@ import (
 	"io"
 	"net/http"
 	"os"
+	"reflect"
 )
+
+var apiKey string = "cc8d5ba84amshb27935b6f1362f5p1be649jsnfa798a2da04d"
+var apiHost string = "cricket-live-data.p.rapidapi.com"
+
+func hitAPI(url string) []uint8 {
+	req, _ := http.NewRequest("GET", url, nil)
+	req.Header.Add("X-RapidAPI-Key", apiKey)
+	req.Header.Add("X-RapidAPI-Host", apiHost)
+	res, _ := http.DefaultClient.Do(req)
+	defer res.Body.Close()
+	body, _ := io.ReadAll(res.Body)
+	return body
+}
 
 func main() {
 
 	url := "https://cricket-live-data.p.rapidapi.com/series"
 
-	req, _ := http.NewRequest("GET", url, nil)
+	body := hitAPI(url)
 
-	req.Header.Add("X-RapidAPI-Key", "cc8d5ba84amshb27935b6f1362f5p1be649jsnfa798a2da04d")
-	req.Header.Add("X-RapidAPI-Host", "cricket-live-data.p.rapidapi.com")
-
-	res, _ := http.DefaultClient.Do(req)
-
-	defer res.Body.Close()
-	body, _ := io.ReadAll(res.Body)
+	// find out the data type of body variable
+	fmt.Println(reflect.TypeOf(body))
 
 	// fmt.Println(res)
 	// fmt.Println(string(body))
