@@ -74,7 +74,15 @@ func main() {
 		fmt.Println(key)
 	}
 
-	meta := data_map.(map[string]interface{})["meta"]
-	fmt.Println(meta)
+	// meta := data_map.(map[string]interface{})["meta"]
+	// fmt.Println(meta)
+
+	fmt.Println(data_map["meta"])
+
+	// // used to find the type of data in golang
+	// fmt.Println(reflect.TypeOf(data_map["meta"].(map[string]interface{})))
+
+	// meta := data_map["meta"].(map[string]interface{})
+	// fmt.Println(meta)
 
 }
