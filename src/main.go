@@ -4,12 +4,14 @@ import (
 	"encoding/json"
 	"fmt"
 	"io"
+	"io/ioutil"
 	"net/http"
 	"os"
 	"reflect"
 )
 
-var apiKey string = "cc8d5ba84amshb27935b6f1362f5p1be649jsnfa798a2da04d"
+var fileContents, err = ioutil.ReadFile("helper/apiKey.txt")
+var apiKey string = string(fileContents)
 var apiHost string = "cricket-live-data.p.rapidapi.com"
 
 func hitAPI(url string) []uint8 {
