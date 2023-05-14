@@ -1,0 +1,1 @@
+This directory contains config details for the application
