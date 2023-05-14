@@ -9,14 +9,18 @@ import (
 	"os"
 )
 
-var fileContents, err = ioutil.ReadFile("../config/apiKey.txt")
+var fileContents, err = ioutil.ReadFile("config/apiKey.txt")
+
+//	if err != nil {
+//		fmt.Println("error reading file: ", err)
+//	}
 var apiKey string = string(fileContents)
+
 var apiHost string = "cricket-live-data.p.rapidapi.com"
 
 func HitAPI() {
 
 	url_fixtures := "https://cricket-live-data.p.rapidapi.com/fixtures-by-series/1430"
-	// body_fixtures := hitAPI(url_fixtures)
 	req_fixtures, _ := http.NewRequest("GET", url_fixtures, nil)
 	req_fixtures.Header.Add("X-RapidAPI-Key", apiKey)
 	req_fixtures.Header.Add("X-RapidAPI-Host", apiHost)
