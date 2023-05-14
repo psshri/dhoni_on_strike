@@ -33,3 +33,13 @@ This application notifies the end user whenever MS Dhoni is out on the pitch to 
 
 ### imp links
 - https://github.com/mskian/cricket-cli
+
+
+### aws lambda
+- mera ek lambda function roz run hoga aur updated fixtures ki list rds me update karega
+
+
+### dockerfile
+
+go get -u github.com/go-sql-driver/mysql
+the above line of code is required to setup the connection between mysql and golang. see how you can run the above line of code within the container image in dockerfile
