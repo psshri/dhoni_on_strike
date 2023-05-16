@@ -80,14 +80,49 @@ func CreateDBTable() {
 	// the function is executed completely
 	defer db.Close()
 
-	// if the database exists delete it first
-	_, err = db.Exec("DROP DATABASE IF EXISTS " + dbName)
+	// check if db exists
+	// if db exists
+	// 	if table exists
+	// 		drop the table
 
-	// create a new database
-	_, err = db.Exec("CREATE DATABASE IF NOT EXISTS " + dbName)
+	// if db does not exists
+	// 	create db
+
+	// create table
+
+	query_db_exists := fmt.Sprintf("SELECT SCHEMA_NAME FROM information_schema.SCHEMATA WHERE SCHEMA_NAME = '%s'", dbName)
+	row_db_exists := db.QueryRow(query_db_exists)
+
+	var dbNameResult string
+	err = row_db_exists.Scan(&dbNameResult)
 	if err != nil {
-		log.Fatal(err)
-		fmt.Println("error in creating database")
+		if err == sql.ErrNoRows {
+			// fmt.Println("Database does not exist")
+			// database does not exists
+			// create a new database
+			_, err = db.Exec("CREATE DATABASE " + dbName)
+			if err != nil {
+				log.Fatal(err)
+				fmt.Println("error in creating database")
+			}
+		} else {
+			fmt.Println("Error checking database:", err)
+		}
+	} else {
+		// database exits
+		// switch to the database
+		_, err = db.Exec("USE " + dbName)
+		if err != nil {
+			log.Fatal(err)
+			fmt.Println("error in using the database")
+		}
+
+		// drop table if it exists
+		_, err = db.Exec("DROP TABLE IF EXISTS " + tableName)
+		if err != nil {
+			log.Fatal(err)
+			fmt.Println("error in dropping the table")
+		}
 	}
 
 	// switch to the new database
@@ -98,7 +133,7 @@ func CreateDBTable() {
 	}
 
 	// create a new table in the database
-	_, err = db.Exec("CREATE TABLE IF NOT EXISTS " + tableName + " (id INT AUTO_INCREMENT PRIMARY KEY, date DATE, time TIME, match_id INT, match_subtitle VARCHAR(255), home_team VARCHAR(255), away_team VARCHAR(255), result VARCHAR(255), status VARCHAR(255))")
+	_, err = db.Exec("CREATE TABLE  " + tableName + " (id INT AUTO_INCREMENT PRIMARY KEY, date DATE, time TIME, match_id INT, match_subtitle VARCHAR(255), home_team VARCHAR(255), away_team VARCHAR(255), result VARCHAR(255), status VARCHAR(255))")
 	if err != nil {
 		log.Fatal(err)
 		fmt.Println("error in creating a table")
