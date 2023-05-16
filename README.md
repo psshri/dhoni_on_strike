@@ -43,3 +43,15 @@ This application notifies the end user whenever MS Dhoni is out on the pitch to 
 
 go get -u github.com/go-sql-driver/mysql
 the above line of code is required to setup the connection between mysql and golang. see how you can run the above line of code within the container image in dockerfile
+
+
+### flow 
+- parse the fixtures and store it in mysql db/table
+- hit the score api every few mins and get the current score and evaluate whether a particular player is on strike or not
+
+
+### code scheduling in aws
+- a code should be executed each day that fetches the fixtures info and updates it in rds database
+- the main code that runs and fetches live score for comparison should be executed whenever csk's match is played, so the trigger for that code has to be created based on the rds data
+
+### fixtures.json

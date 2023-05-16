@@ -1,4 +1,6 @@
-package fixtures
+// This script downloads IPL fixtures and creates a fixtures.json file
+
+package fetchFixtures
 
 import (
 	"encoding/json"
@@ -29,7 +31,7 @@ func HitAPI() {
 	body_fixtures, _ := io.ReadAll(res_fixtures.Body)
 
 	// create a file to store the data
-	file_fixtures, err_fixtures1 := os.Create("fixtures/fixtures.json")
+	file_fixtures, err_fixtures1 := os.Create("fetchFixtures/fixtures.json")
 	if err_fixtures1 != nil {
 		fmt.Println("Error creating fixtures.json: ", err_fixtures1)
 		return

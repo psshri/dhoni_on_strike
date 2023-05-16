@@ -2,12 +2,12 @@ package main
 
 import (
 	"src/createDBTable"
-	"src/fixtures"
+	"src/fetchFixtures"
 )
 
 func main() {
 
-	fixtures.HitAPI()
+	fetchFixtures.HitAPI()
 	createDBTable.CreateDBTable()
 
 }
