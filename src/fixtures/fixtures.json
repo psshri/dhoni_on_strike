@@ -1195,9 +1195,9 @@
             "id": 2719081,
             "match_subtitle": "60th Match",
             "match_title": "Rajasthan Royals v Royal Challengers Bangalore at Sawai Mansingh Stadium, Jaipur (day/night), T20.",
-            "result": "",
+            "result": "RCB won by 112 runs",
             "series_id": 1430,
-            "status": "Fixture",
+            "status": "Complete",
             "venue": "Sawai Mansingh Stadium, Jaipur (day/night)"
         },
         {
@@ -1215,9 +1215,9 @@
             "id": 2719083,
             "match_subtitle": "61st Match",
             "match_title": "Chennai Super Kings v Kolkata Knight Riders at MA Chidambaram Stadium, Chepauk, Chennai (night), T20.",
-            "result": "",
+            "result": "KKR won by 6 wkts (9b rem)",
             "series_id": 1430,
-            "status": "Fixture",
+            "status": "Complete",
             "venue": "MA Chidambaram Stadium, Chepauk, Chennai (night)"
         },
         {
@@ -1235,9 +1235,9 @@
             "id": 2719085,
             "match_subtitle": "62nd Match",
             "match_title": "Gujarat Titans v Sunrisers Hyderabad at Narendra Modi Stadium, Ahmedabad (night), T20.",
-            "result": "",
+            "result": "Titans won by 34 runs",
             "series_id": 1430,
-            "status": "Fixture",
+            "status": "Complete",
             "venue": "Narendra Modi Stadium, Ahmedabad (night)"
         },
         {
@@ -1403,13 +1403,13 @@
         {
             "away": {
                 "code": "",
-                "id": 237378,
+                "id": 237705,
                 "name": "TBC"
             },
             "date": "2023-05-23T14:00:00+00:00",
             "home": {
                 "code": "",
-                "id": 237375,
+                "id": 237702,
                 "name": "TBC"
             },
             "id": 2740713,
@@ -1423,13 +1423,13 @@
         {
             "away": {
                 "code": "",
-                "id": 237384,
+                "id": 237711,
                 "name": "TBC"
             },
             "date": "2023-05-24T14:00:00+00:00",
             "home": {
                 "code": "",
-                "id": 237381,
+                "id": 237708,
                 "name": "TBC"
             },
             "id": 2740715,
@@ -1443,13 +1443,13 @@
         {
             "away": {
                 "code": "",
-                "id": 237390,
+                "id": 237717,
                 "name": "TBC"
             },
             "date": "2023-05-26T14:00:00+00:00",
             "home": {
                 "code": "",
-                "id": 237387,
+                "id": 237714,
                 "name": "TBC"
             },
             "id": 2740717,
@@ -1463,13 +1463,13 @@
         {
             "away": {
                 "code": "",
-                "id": 237396,
+                "id": 237723,
                 "name": "TBC"
             },
             "date": "2023-05-28T14:00:00+00:00",
             "home": {
                 "code": "",
-                "id": 237393,
+                "id": 237720,
                 "name": "TBC"
             },
             "id": 2740719,
