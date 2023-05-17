@@ -55,3 +55,8 @@ the above line of code is required to setup the connection between mysql and gol
 - the main code that runs and fetches live score for comparison should be executed whenever csk's match is played, so the trigger for that code has to be created based on the rds data
 
 ### fixtures.json
+
+table columns:
+- id
+- date
+- 
