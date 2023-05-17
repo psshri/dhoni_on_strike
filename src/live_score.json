@@ -1,0 +1,58 @@
+{
+    "results": {
+        "fixture": {
+            "id": 2719089,
+            "series_id": 1430,
+            "match_title": "Punjab Kings v Delhi Capitals at Himachal Pradesh Cricket Association Stadium, Dharamsala (night), T20.",
+            "venue": "Himachal Pradesh Cricket Association Stadium, Dharamsala (night)",
+            "start_date": "2023-05-17T14:00:00+00:00",
+            "end_date": "2023-05-17T14:00:00+00:00",
+            "dates": [
+                {
+                    "date": "2023-05-17T14:00:00+00:00",
+                    "match_subtitle": "64th Match"
+                }
+            ],
+            "home": {
+                "id": 145221,
+                "name": "Punjab Kings",
+                "code": ""
+            },
+            "away": {
+                "id": 120252,
+                "name": "Delhi Capitals",
+                "code": ""
+            },
+            "series": {
+                "series_id": 1430,
+                "series_name": "Indian Premier League",
+                "status": "Current series",
+                "season": "2023",
+                "updated_at": "2023-05-16T23:00:05.000000Z"
+            }
+        },
+        "live_details": {
+            "match_summary": {
+                "in_play": "Yes",
+                "result": "No",
+                "status": "Starts at 19:30 local time",
+                "toss": "",
+                "home_scores": "",
+                "away_scores": ""
+            },
+            "officials": {
+                "umpire_1": "KN Ananthapadmanabhan",
+                "umpire_2": "Saidharshan Kumar",
+                "umpire_tv": "Rod Tucker",
+                "referee": "Pankaj Dharmani",
+                "umpire_reserve": "Parashar Joshi"
+            },
+            "scorecard": [],
+            "stats": null,
+            "teamsheets": {
+                "home": [],
+                "away": []
+            }
+        }
+    }
+}
