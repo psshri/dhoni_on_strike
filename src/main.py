@@ -27,20 +27,23 @@ today_string = func_today_string()
 ipl_series_id = 1430
 team_name = "Delhi Capitals" 
 team_id = 120252
-player_name = "Sarfaraz Khan"
-player_id = 1927587
+player_name = "Prithvi Shaw"
+player_id = 3210516
 fixture_data_path = "fixtures.json"
 live_score_data_path = "live_score.json"
 
 # functions ########################################################
 
+# counter = None
+counter = {'value': None}
+
 def update_counter():
     global counter
-    counter = is_batting(live_score_data_path, player_id)
+    counter['value'] = is_batting(live_score_data_path, player_id)
 
 def print_status(counter):
     print("\n")
-    if counter == 1:
+    if counter['value'] == 1:
         print(player_name, "is on strike!")
     else:
         print(team_name +"'" ,"match is today,", player_name, "is yet to bat!")
@@ -61,8 +64,6 @@ if match_today == 1:
                                   api_key_path=api_key_path,
                                   X_RapidAPI_Host=X_RapidAPI_Host,
                                   live_score_data_path=live_score_data_path)
-    
-    counter = None
 
     schedule.every(2).seconds.do(update_counter)
 

@@ -25,8 +25,8 @@
             "series_id": 1470,
             "venue": "Harare Sports Club",
             "date": "2023-05-17T07:30:00+00:00",
-            "status": "Fixture",
-            "result": "",
+            "status": "Complete",
+            "result": "Zimbabwe A won by 24 runs",
             "match_title": "Zimbabwe A v Pakistan A at Harare Sports Club, List A.",
             "match_subtitle": "1st Unofficaial ODI",
             "home": {
@@ -105,8 +105,8 @@
             "series_id": 1430,
             "venue": "Himachal Pradesh Cricket Association Stadium, Dharamsala (night)",
             "date": "2023-05-17T14:00:00+00:00",
-            "status": "Fixture",
-            "result": "",
+            "status": "Complete",
+            "result": "Capitals won by 15 runs",
             "match_title": "Punjab Kings v Delhi Capitals at Himachal Pradesh Cricket Association Stadium, Dharamsala (night), T20.",
             "match_subtitle": "64th Match",
             "home": {
