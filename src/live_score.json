@@ -35,10 +35,10 @@
             "match_summary": {
                 "in_play": "Yes",
                 "result": "No",
-                "status": "Starts at 19:30 local time",
-                "toss": "",
+                "status": "Delhi Capitals Innings - 29/0 after 3.4 overs",
+                "toss": "Punjab Kings, elected to field first",
                 "home_scores": "",
-                "away_scores": ""
+                "away_scores": "29/0 (3.4/20 ov)"
             },
             "officials": {
                 "umpire_1": "KN Ananthapadmanabhan",
@@ -47,11 +47,476 @@
                 "referee": "Pankaj Dharmani",
                 "umpire_reserve": "Parashar Joshi"
             },
-            "scorecard": [],
-            "stats": null,
+            "scorecard": [
+                {
+                    "innings_number": 1,
+                    "current": true,
+                    "title": "Delhi Capitals Innings",
+                    "overs": "3.4",
+                    "runs": 29,
+                    "wickets": "0",
+                    "extras": 0,
+                    "extras_detail": "",
+                    "fow": "",
+                    "batting": [
+                        {
+                            "bat_order": 1,
+                            "player_id": 659679,
+                            "player_name": "David Warner",
+                            "how_out": "not out",
+                            "minutes": "-",
+                            "runs": 25,
+                            "balls": 14,
+                            "fours": 2,
+                            "sixes": 2,
+                            "strike_rate": "178.57"
+                        },
+                        {
+                            "bat_order": 2,
+                            "player_id": 3210516,
+                            "player_name": "Prithvi Shaw",
+                            "how_out": "not out",
+                            "minutes": "-",
+                            "runs": 10,
+                            "balls": 10,
+                            "fours": 1,
+                            "sixes": 0,
+                            "strike_rate": "100.00"
+                        }
+                    ],
+                    "still_to_bat": [
+                        {
+                            "player_id": 2008107,
+                            "player_name": "Phil Salt"
+                        },
+                        {
+                            "player_id": 956547,
+                            "player_name": "Rilee Rossouw"
+                        },
+                        {
+                            "player_id": 1664085,
+                            "player_name": "Axar Patel"
+                        },
+                        {
+                            "player_id": 3762819,
+                            "player_name": "Aman Hakim Khan"
+                        },
+                        {
+                            "player_id": 3877506,
+                            "player_name": "Yash Dhull"
+                        },
+                        {
+                            "player_id": 1677717,
+                            "player_name": "Kuldeep Yadav"
+                        },
+                        {
+                            "player_id": 1445949,
+                            "player_name": "Anrich Nortje"
+                        },
+                        {
+                            "player_id": 710349,
+                            "player_name": "Ishant Sharma"
+                        },
+                        {
+                            "player_id": 2827947,
+                            "player_name": "Khaleel Ahmed"
+                        }
+                    ],
+                    "bowling": [
+                        {
+                            "player_id": 1988931,
+                            "player_name": "Sam Curran",
+                            "overs": "2",
+                            "maidens": 0,
+                            "runs_conceded": 16,
+                            "wickets": 0,
+                            "economy": "8.00",
+                            "dot_balls": 4,
+                            "fours": 2,
+                            "sixes": 0,
+                            "extras": "0"
+                        },
+                        {
+                            "player_id": 1650657,
+                            "player_name": "Kagiso Rabada",
+                            "overs": "1.6",
+                            "maidens": 0,
+                            "runs_conceded": 19,
+                            "wickets": 0,
+                            "economy": "9.50",
+                            "dot_balls": 6,
+                            "fours": 1,
+                            "sixes": 2,
+                            "extras": "0"
+                        }
+                    ]
+                }
+            ],
+            "stats": {
+                "current_run_rate": "7.56",
+                "min_remaining_overs": "",
+                "partnership_player_1": "David Warner",
+                "partnership_player_1_runs": 25,
+                "partnership_player_1_balls": 14,
+                "partnership_player_2": "Prithvi Shaw",
+                "partnership_player_2_runs": 10,
+                "partnership_player_2_balls": 10,
+                "partnership_run_rate": "8.75",
+                "partnership_overs": "4",
+                "partnership_runs": 35,
+                "last_18_balls": [
+                    {
+                        "isDismissal": false,
+                        "isBoundary": true,
+                        "isWide": false,
+                        "isMaiden": false,
+                        "isNoBall": false,
+                        "isBye": false,
+                        "isOverEnd": false,
+                        "currentOver": 3,
+                        "runs": 6,
+                        "isLegBye": false,
+                        "currentOverBall": 4
+                    },
+                    {
+                        "isDismissal": false,
+                        "isBoundary": false,
+                        "isWide": false,
+                        "isMaiden": false,
+                        "isNoBall": false,
+                        "isBye": false,
+                        "isOverEnd": false,
+                        "currentOver": 3,
+                        "runs": 1,
+                        "isLegBye": false,
+                        "currentOverBall": 3
+                    },
+                    {
+                        "isDismissal": false,
+                        "isBoundary": false,
+                        "isWide": false,
+                        "isMaiden": false,
+                        "isNoBall": false,
+                        "isBye": false,
+                        "isOverEnd": false,
+                        "currentOver": 3,
+                        "runs": 0,
+                        "isLegBye": false,
+                        "currentOverBall": 2
+                    },
+                    {
+                        "isDismissal": false,
+                        "isBoundary": true,
+                        "isWide": false,
+                        "isMaiden": false,
+                        "isNoBall": false,
+                        "isBye": false,
+                        "isOverEnd": false,
+                        "currentOver": 3,
+                        "runs": 4,
+                        "isLegBye": false,
+                        "currentOverBall": 1
+                    },
+                    {
+                        "isDismissal": false,
+                        "isBoundary": true,
+                        "isWide": false,
+                        "isMaiden": false,
+                        "isNoBall": false,
+                        "isBye": false,
+                        "isOverEnd": true,
+                        "currentOver": 2,
+                        "runs": 4,
+                        "isLegBye": false,
+                        "currentOverBall": 6
+                    },
+                    {
+                        "isDismissal": false,
+                        "isBoundary": true,
+                        "isWide": false,
+                        "isMaiden": false,
+                        "isNoBall": false,
+                        "isBye": false,
+                        "isOverEnd": false,
+                        "currentOver": 2,
+                        "runs": 4,
+                        "isLegBye": false,
+                        "currentOverBall": 5
+                    },
+                    {
+                        "isDismissal": false,
+                        "isBoundary": false,
+                        "isWide": false,
+                        "isMaiden": false,
+                        "isNoBall": false,
+                        "isBye": false,
+                        "isOverEnd": false,
+                        "currentOver": 2,
+                        "runs": 1,
+                        "isLegBye": false,
+                        "currentOverBall": 4
+                    },
+                    {
+                        "isDismissal": false,
+                        "isBoundary": false,
+                        "isWide": false,
+                        "isMaiden": false,
+                        "isNoBall": false,
+                        "isBye": false,
+                        "isOverEnd": false,
+                        "currentOver": 2,
+                        "runs": 1,
+                        "isLegBye": false,
+                        "currentOverBall": 3
+                    },
+                    {
+                        "isDismissal": false,
+                        "isBoundary": false,
+                        "isWide": false,
+                        "isMaiden": false,
+                        "isNoBall": false,
+                        "isBye": false,
+                        "isOverEnd": false,
+                        "currentOver": 2,
+                        "runs": 0,
+                        "isLegBye": false,
+                        "currentOverBall": 2
+                    },
+                    {
+                        "isDismissal": false,
+                        "isBoundary": false,
+                        "isWide": false,
+                        "isMaiden": false,
+                        "isNoBall": false,
+                        "isBye": false,
+                        "isOverEnd": false,
+                        "currentOver": 2,
+                        "runs": 2,
+                        "isLegBye": false,
+                        "currentOverBall": 1
+                    },
+                    {
+                        "isDismissal": false,
+                        "isBoundary": false,
+                        "isWide": false,
+                        "isMaiden": false,
+                        "isNoBall": false,
+                        "isBye": false,
+                        "isOverEnd": true,
+                        "currentOver": 1,
+                        "runs": 0,
+                        "isLegBye": false,
+                        "currentOverBall": 6
+                    },
+                    {
+                        "isDismissal": false,
+                        "isBoundary": false,
+                        "isWide": false,
+                        "isMaiden": false,
+                        "isNoBall": false,
+                        "isBye": false,
+                        "isOverEnd": false,
+                        "currentOver": 1,
+                        "runs": 0,
+                        "isLegBye": false,
+                        "currentOverBall": 5
+                    },
+                    {
+                        "isDismissal": false,
+                        "isBoundary": false,
+                        "isWide": false,
+                        "isMaiden": false,
+                        "isNoBall": false,
+                        "isBye": false,
+                        "isOverEnd": false,
+                        "currentOver": 1,
+                        "runs": 1,
+                        "isLegBye": false,
+                        "currentOverBall": 4
+                    },
+                    {
+                        "isDismissal": false,
+                        "isBoundary": false,
+                        "isWide": false,
+                        "isMaiden": false,
+                        "isNoBall": false,
+                        "isBye": false,
+                        "isOverEnd": false,
+                        "currentOver": 1,
+                        "runs": 0,
+                        "isLegBye": false,
+                        "currentOverBall": 3
+                    },
+                    {
+                        "isDismissal": false,
+                        "isBoundary": false,
+                        "isWide": false,
+                        "isMaiden": false,
+                        "isNoBall": false,
+                        "isBye": false,
+                        "isOverEnd": false,
+                        "currentOver": 1,
+                        "runs": 0,
+                        "isLegBye": false,
+                        "currentOverBall": 2
+                    },
+                    {
+                        "isDismissal": false,
+                        "isBoundary": false,
+                        "isWide": false,
+                        "isMaiden": false,
+                        "isNoBall": false,
+                        "isBye": false,
+                        "isOverEnd": false,
+                        "currentOver": 1,
+                        "runs": 1,
+                        "isLegBye": false,
+                        "currentOverBall": 1
+                    },
+                    {
+                        "isDismissal": false,
+                        "isBoundary": false,
+                        "isWide": false,
+                        "isMaiden": false,
+                        "isNoBall": false,
+                        "isBye": false,
+                        "isOverEnd": true,
+                        "currentOver": 0,
+                        "runs": 1,
+                        "isLegBye": false,
+                        "currentOverBall": 6
+                    },
+                    {
+                        "isDismissal": false,
+                        "isBoundary": false,
+                        "isWide": false,
+                        "isMaiden": false,
+                        "isNoBall": false,
+                        "isBye": false,
+                        "isOverEnd": false,
+                        "currentOver": 0,
+                        "runs": 2,
+                        "isLegBye": false,
+                        "currentOverBall": 5
+                    }
+                ],
+                "last_update": "2023-05-17T14:22:01+00:00"
+            },
             "teamsheets": {
-                "home": [],
-                "away": []
+                "home": [
+                    {
+                        "player_id": 84717,
+                        "player_name": "Shikhar Dhawan",
+                        "position": "Unknown"
+                    },
+                    {
+                        "player_id": 3377886,
+                        "player_name": "Atharva Taide",
+                        "position": "Allrounder"
+                    },
+                    {
+                        "player_id": 1211718,
+                        "player_name": "Liam Livingstone",
+                        "position": "Allrounder"
+                    },
+                    {
+                        "player_id": 2165613,
+                        "player_name": "Jitesh Sharma",
+                        "position": "Wicketkeeper"
+                    },
+                    {
+                        "player_id": 1988931,
+                        "player_name": "Sam Curran",
+                        "position": "Allrounder"
+                    },
+                    {
+                        "player_id": 2159169,
+                        "player_name": "M Shahrukh Khan",
+                        "position": "Unknown"
+                    },
+                    {
+                        "player_id": 3505935,
+                        "player_name": "Harpreet Brar",
+                        "position": "Bowler"
+                    },
+                    {
+                        "player_id": 3194448,
+                        "player_name": "Rahul Chahar",
+                        "position": "Bowler"
+                    },
+                    {
+                        "player_id": 1650657,
+                        "player_name": "Kagiso Rabada",
+                        "position": "Bowler"
+                    },
+                    {
+                        "player_id": 2480757,
+                        "player_name": "Nathan Ellis",
+                        "position": "Bowler"
+                    },
+                    {
+                        "player_id": 3377940,
+                        "player_name": "Arshdeep Singh",
+                        "position": "Bowler"
+                    }
+                ],
+                "away": [
+                    {
+                        "player_id": 659679,
+                        "player_name": "David Warner",
+                        "position": "Unknown"
+                    },
+                    {
+                        "player_id": 3210516,
+                        "player_name": "Prithvi Shaw",
+                        "position": "Unknown"
+                    },
+                    {
+                        "player_id": 2008107,
+                        "player_name": "Phil Salt",
+                        "position": "Wicketkeeper"
+                    },
+                    {
+                        "player_id": 956547,
+                        "player_name": "Rilee Rossouw",
+                        "position": "Unknown"
+                    },
+                    {
+                        "player_id": 1664085,
+                        "player_name": "Axar Patel",
+                        "position": "Allrounder"
+                    },
+                    {
+                        "player_id": 3762819,
+                        "player_name": "Aman Hakim Khan",
+                        "position": "Allrounder"
+                    },
+                    {
+                        "player_id": 3877506,
+                        "player_name": "Yash Dhull",
+                        "position": "Unknown"
+                    },
+                    {
+                        "player_id": 1677717,
+                        "player_name": "Kuldeep Yadav",
+                        "position": "Bowler"
+                    },
+                    {
+                        "player_id": 1445949,
+                        "player_name": "Anrich Nortje",
+                        "position": "Bowler"
+                    },
+                    {
+                        "player_id": 710349,
+                        "player_name": "Ishant Sharma",
+                        "position": "Bowler"
+                    },
+                    {
+                        "player_id": 2827947,
+                        "player_name": "Khaleel Ahmed",
+                        "position": "Bowler"
+                    }
+                ]
             }
         }
     }

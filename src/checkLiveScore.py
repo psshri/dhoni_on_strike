@@ -36,6 +36,8 @@ def get_live_score(match_info, url, api_key_path, X_RapidAPI_Host, live_score_da
     json_data = response.json()
     with open(live_score_data_path, "w") as file:
         json.dump(json_data, file, indent=4)
+    
+    print("Live score updated successfully!")
 
     return 
 
@@ -59,5 +61,7 @@ def is_batting(live_score_data_path, player_id):
 
     if player_id in list_batsmen:
         counter = 1
+
+    print("Live score evaluated successfully")
 
     return counter

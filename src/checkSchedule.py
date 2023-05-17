@@ -40,6 +40,8 @@ def get_schedule(url, X_RapidAPI_Host, api_key_path, today_string, fixture_data_
     with open(fixture_data_path, "w") as file:
         json.dump(json_data, file, indent=4)
 
+    print("Today's match schedule fetched successfully")
+
     return
 
 # find out if there is a match of ${team_name} today
@@ -67,5 +69,7 @@ def evaluate_schedule(fixture_data_path, ipl_series_id, team_id, today_string):
                     match_time_730 = 1
                 else:
                     match_time_330 = 1
+
+    print("Today's schedule evaluated successfully!")
 
     return match_today, match_time_730, match_time_330, match_info
