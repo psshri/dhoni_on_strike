@@ -1,0 +1,164 @@
+{
+    "results": [
+        {
+            "id": 2742753,
+            "series_id": 1467,
+            "venue": "Khost Cricket Stadium",
+            "date": "2023-05-17T04:30:00+00:00",
+            "status": "Fixture",
+            "result": "",
+            "match_title": "Pamir Legends v Maiwand Defenders at Khost Cricket Stadium, List A.",
+            "match_subtitle": "Final",
+            "home": {
+                "id": 166365,
+                "name": "Pamir Legends",
+                "code": ""
+            },
+            "away": {
+                "id": 166368,
+                "name": "Maiwand Defenders",
+                "code": ""
+            }
+        },
+        {
+            "id": 2744605,
+            "series_id": 1470,
+            "venue": "Harare Sports Club",
+            "date": "2023-05-17T07:30:00+00:00",
+            "status": "Fixture",
+            "result": "",
+            "match_title": "Zimbabwe A v Pakistan A at Harare Sports Club, List A.",
+            "match_subtitle": "1st Unofficaial ODI",
+            "home": {
+                "id": 144120,
+                "name": "Zimbabwe A",
+                "code": ""
+            },
+            "away": {
+                "id": 131958,
+                "name": "Pakistan A",
+                "code": ""
+            }
+        },
+        {
+            "id": 2752299,
+            "series_id": 1475,
+            "venue": "Mitchells and Butlers' Ground, Birmingham",
+            "date": "2023-05-17T11:30:00+00:00",
+            "status": "Fixture",
+            "result": "",
+            "match_title": "Warwickshire 2nd XI v Northamptonshire 2nd XI at Mitchells and Butlers' Ground, Birmingham, T20.",
+            "match_subtitle": "10th match",
+            "home": {
+                "id": 237906,
+                "name": "Warwickshire 2nd XI",
+                "code": ""
+            },
+            "away": {
+                "id": 237909,
+                "name": "Northamptonshire 2nd XI",
+                "code": ""
+            }
+        },
+        {
+            "id": 2752303,
+            "series_id": 1475,
+            "venue": "Weetwood Playing Fields, Leeds",
+            "date": "2023-05-17T11:30:00+00:00",
+            "status": "Fixture",
+            "result": "",
+            "match_title": "Yorkshire 2nd XI v Leicestershire 2nd XI at Weetwood Playing Fields, Leeds, T20.",
+            "match_subtitle": "12th match",
+            "home": {
+                "id": 237912,
+                "name": "Yorkshire 2nd XI",
+                "code": ""
+            },
+            "away": {
+                "id": 237915,
+                "name": "Leicestershire 2nd XI",
+                "code": ""
+            }
+        },
+        {
+            "id": 2752297,
+            "series_id": 1475,
+            "venue": "New Malden Cricket Club Ground",
+            "date": "2023-05-17T14:00:00+00:00",
+            "status": "Fixture",
+            "result": "",
+            "match_title": "Surrey 2nd XI v Essex 2nd XI at New Malden Cricket Club Ground, T20.",
+            "match_subtitle": "9th match",
+            "home": {
+                "id": 237918,
+                "name": "Surrey 2nd XI",
+                "code": ""
+            },
+            "away": {
+                "id": 237921,
+                "name": "Essex 2nd XI",
+                "code": ""
+            }
+        },
+        {
+            "id": 2719089,
+            "series_id": 1430,
+            "venue": "Himachal Pradesh Cricket Association Stadium, Dharamsala (night)",
+            "date": "2023-05-17T14:00:00+00:00",
+            "status": "Fixture",
+            "result": "",
+            "match_title": "Punjab Kings v Delhi Capitals at Himachal Pradesh Cricket Association Stadium, Dharamsala (night), T20.",
+            "match_subtitle": "64th Match",
+            "home": {
+                "id": 145221,
+                "name": "Punjab Kings",
+                "code": ""
+            },
+            "away": {
+                "id": 120252,
+                "name": "Delhi Capitals",
+                "code": ""
+            }
+        },
+        {
+            "id": 2752305,
+            "series_id": 1475,
+            "venue": "Weetwood Playing Fields, Leeds",
+            "date": "2023-05-17T15:00:00+00:00",
+            "status": "Fixture",
+            "result": "",
+            "match_title": "Yorkshire 2nd XI v Leicestershire 2nd XI at Weetwood Playing Fields, Leeds, T20.",
+            "match_subtitle": "13th match",
+            "home": {
+                "id": 237912,
+                "name": "Yorkshire 2nd XI",
+                "code": ""
+            },
+            "away": {
+                "id": 237915,
+                "name": "Leicestershire 2nd XI",
+                "code": ""
+            }
+        },
+        {
+            "id": 2752301,
+            "series_id": 1475,
+            "venue": "Mitchells and Butlers' Ground, Birmingham",
+            "date": "2023-05-17T15:00:00+00:00",
+            "status": "Fixture",
+            "result": "",
+            "match_title": "Warwickshire 2nd XI v Northamptonshire 2nd XI at Mitchells and Butlers' Ground, Birmingham, T20.",
+            "match_subtitle": "11th match",
+            "home": {
+                "id": 237906,
+                "name": "Warwickshire 2nd XI",
+                "code": ""
+            },
+            "away": {
+                "id": 237909,
+                "name": "Northamptonshire 2nd XI",
+                "code": ""
+            }
+        }
+    ]
+}
