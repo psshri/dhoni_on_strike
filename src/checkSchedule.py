@@ -6,28 +6,15 @@
 import requests
 import json
 from collections import namedtuple
-
-#####################################################################
-
-# helper functions ##################################################
-
-def readAPIkey(file_path):
-    try:
-        with open(file_path, 'r') as file:
-            api_key = file.read().strip()
-        return api_key
-    except FileNotFoundError:
-        print(f"Error: File '{file_path}' not found.")
-    except IOError:
-        print(f"Error: Unable to read file '{file_path}'.")
+from main import readAPIkey
 
 #####################################################################
 
 
 # get today's match schedule
-def get_schedule(url, X_RapidAPI_Host, api_key_path, today_string, fixture_data_path):
+def get_schedule(url, X_RapidAPI_Host, info_file_path, today_string, fixture_data_path):
 
-    X_RapidAPI_Key = readAPIkey(api_key_path)
+    X_RapidAPI_Key = readAPIkey(info_file_path)
     
     url = url + today_string
     headers = {
