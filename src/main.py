@@ -7,8 +7,7 @@ import requests
 import json
 
 from checkSchedule import get_schedule, evaluate_schedule
-from checkLiveScore import get_live_score
-from checkLiveScore import is_batting
+from checkLiveScore import get_live_score, is_batting
 
 # helper functions ##################################################
 
@@ -51,10 +50,10 @@ info_file_path = 'config/info.json'
 
 today_string = func_today_string()
 ipl_series_id = 1430
-team_name = "Delhi Capitals" 
-team_id = 120252
-player_name = "Prithvi Shaw"
-player_id = 3210516
+team_name = "Punjab Kings" 
+team_id = 145221
+player_name = "Shikhar Dhawan"
+player_id = 84717
 fixture_data_path = "fixtures.json"
 live_score_data_path = "live_score.json"
 
@@ -100,7 +99,6 @@ if match_today == 1:
     while True:
         schedule.run_pending()
         time.sleep(1)
-        # print(counter)
 
 else:
     print("No", team_name ,"match today!")

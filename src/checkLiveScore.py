@@ -5,8 +5,20 @@
 
 import requests
 import json
-from collections import namedtuple
-from main import readAPIkey
+
+#####################################################################
+
+# functions #########################################################
+
+def readAPIkey(file_path):
+    try:
+        with open(file_path, 'r') as file:
+            data = json.load(file)
+        return data['rapidAPI_api_key']
+    except FileNotFoundError:
+        print(f"Error: File '{file_path}' not found.")
+    except IOError:
+        print(f"Error: Unable to read file '{file_path}'.")
 
 #####################################################################
 
