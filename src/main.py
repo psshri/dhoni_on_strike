@@ -102,11 +102,5 @@ if match_today == 1:
         time.sleep(1)
         # print(counter)
 
-
-    # if counter == 1:
-    #     print(player_name, "is on strike!")
-    # else:
-    #     print(team_name +"'" ,"match is today,", player_name, "is yet to bat!")
-
 else:
     print("No", team_name ,"match today!")
