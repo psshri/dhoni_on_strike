@@ -3,3 +3,4 @@ dbDetails.json
 info.json
 test.ipynb
 test1.py
+**/__pycache__/
