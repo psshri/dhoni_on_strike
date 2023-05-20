@@ -6,8 +6,8 @@ import time
 import requests
 import json
 
-from checkSchedule import get_schedule, evaluate_schedule
-from checkLiveScore import get_live_score, is_batting
+from checkSchedule.checkSchedule import get_schedule, evaluate_schedule
+from checkLiveScore.checkLiveScore import get_live_score, is_batting
 
 # helper functions ##################################################
 
@@ -55,8 +55,8 @@ team_name = "Punjab Kings"
 team_id = 145221
 player_name = "Shikhar Dhawan"
 player_id = 84717
-fixture_data_path = "fixtures.json"
-live_score_data_path = "live_score.json"
+fixture_data_path = "checkSchedule/fixtures.json"
+live_score_data_path = "checkLiveScore/live_score.json"
 
 # functions ########################################################
 
