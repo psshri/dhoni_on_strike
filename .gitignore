@@ -4,3 +4,5 @@ info.json
 test.ipynb
 test1.py
 **/__pycache__/
+go.mod
+go.sum
