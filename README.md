@@ -66,3 +66,5 @@ table columns:
 ### initialize a go project using
 go mod init <module-name>
 go mod init src
+
+go get github.com/go-telegram-bot-api/telegram-bot-api
