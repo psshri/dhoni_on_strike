@@ -42,7 +42,11 @@ This application notifies the end user whenever MS Dhoni is out on the pitch to 
 ### dockerfile
 
 go get -u github.com/go-sql-driver/mysql
+go get github.com/go-telegram-bot-api/telegram-bot-api
 the above line of code is required to setup the connection between mysql and golang. see how you can run the above line of code within the container image in dockerfile
+- when you will create an image, see how to handle the secrets, find out the best ways to handle secrets for an application when you want to containerize it
+- also find out how you can build your container so that it is not tied to any team_name or player_name, the user should be able to pass on those values
+
 
 
 ### flow 
@@ -68,3 +72,17 @@ go mod init <module-name>
 go mod init src
 
 go get github.com/go-telegram-bot-api/telegram-bot-api
+
+### aws 
+
+- free tier of aws lambda; understand it very well
+- can i send phone notification through aws sns
+- free tier of aws sns
+- can i schedule my lambda function to execute on a particular time in a day and can the next trigger be defined by the code itself?
+- see how to store secrets in aws key vault and how would aws lambda will access those secrets securely
+
+### things to do in aws
+- setup everything manually first
+- then setup everything using github actions
+- then setup everything using aws sdk
+- containerize your code and then run it in aws lambda
