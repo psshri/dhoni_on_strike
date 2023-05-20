@@ -48,7 +48,8 @@ X_RapidAPI_Host = "cricket-live-data.p.rapidapi.com"
 
 info_file_path = 'config/info.json'
 
-today_string = func_today_string()
+# today_string = func_today_string()
+today_string = "2023-05-19"
 ipl_series_id = 1430
 team_name = "Punjab Kings" 
 team_id = 145221

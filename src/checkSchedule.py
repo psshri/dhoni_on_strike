@@ -59,16 +59,16 @@ def evaluate_schedule(fixture_data_path, ipl_series_id, team_id, today_string):
     match_info = None
 
     for item in todays_matches['results']:
-        if item['series_id'] == ipl_series_id:
-            if item['home']['id'] == team_id or item['away']['id'] == team_id:
-                match_today = 1
-                match_date = today_string
-                match_time = todays_matches['results'][5]['date'][11:19]
-                match_info = matchInfo(item['id'], item['home']['name'], item['away']['name'], match_date, match_time)
-                if match_time == '14:00:00':
-                    match_time_730 = 1
-                else:
-                    match_time_330 = 1
+        if item['series_id'] == ipl_series_id and (item['home']['id'] == team_id or item['away']['id'] == team_id):
+            # if item['home']['id'] == team_id or item['away']['id'] == team_id:
+            match_today = 1
+            match_date = today_string
+            match_time = todays_matches['results'][5]['date'][11:19]
+            match_info = matchInfo(item['id'], item['home']['name'], item['away']['name'], match_date, match_time)
+            if match_time == '14:00:00':
+                match_time_730 = 1
+            else:
+                match_time_330 = 1
 
     print("Today's schedule evaluated successfully!")
 
