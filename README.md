@@ -17,6 +17,7 @@ This application notifies the end user whenever MS Dhoni is out on the pitch to 
 ### todos in application code
 - use packages in go to make your appliction scalable and reusable, for example a user should be able to enter the player name(s) of his choice and should be notified for his list of player(s). 
 - you should fill the match data also by api endpoints and not manually
+- right now i am getting telegram notification continuously, and also even after the batsman is on strike, the function is running continuously, i have to include a logic to stop executing the function once the batsmen is on strike
 
 
 ### features:
