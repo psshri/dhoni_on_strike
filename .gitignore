@@ -3,4 +3,4 @@ test.ipynb
 test1.py
 apiKey.txt
 dbDetails.json
-__pycache__/
+**/__pycache__/
