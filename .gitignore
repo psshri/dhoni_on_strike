@@ -4,3 +4,5 @@ test1.py
 apiKey.txt
 dbDetails.json
 **/__pycache__/
+go.mod
+go.sum
