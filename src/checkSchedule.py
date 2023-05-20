@@ -60,7 +60,6 @@ def evaluate_schedule(fixture_data_path, ipl_series_id, team_id, today_string):
 
     for item in todays_matches['results']:
         if item['series_id'] == ipl_series_id and (item['home']['id'] == team_id or item['away']['id'] == team_id):
-            # if item['home']['id'] == team_id or item['away']['id'] == team_id:
             match_today = 1
             match_date = today_string
             match_time = todays_matches['results'][5]['date'][11:19]
