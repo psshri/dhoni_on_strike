@@ -60,3 +60,9 @@ table columns:
 - id
 - date
 - 
+
+
+
+### initialize a go project using
+go mod init <module-name>
+go mod init src
