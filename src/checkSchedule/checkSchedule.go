@@ -114,6 +114,7 @@ func Get_schedule(url string, xRapidAPIHost string, info_file_path string, today
 	fmt.Println("Today's match schedule fetched successfully")
 }
 
+// evaluate today's match schedule
 func Evaluate_schedule(fixtures_data_path string, ipl_series_id int, team_id int, today_string string) (int, int, int, MatchInfo, error) {
 	matchToday := 0
 	matchTime330 := 0

@@ -1,0 +1,800 @@
+{
+    "results": {
+        "fixture": {
+            "away": {
+                "code": "RAR",
+                "id": 101757,
+                "name": "Rajasthan Royals"
+            },
+            "dates": [
+                {
+                    "date": "2023-05-19T14:00:00+00:00",
+                    "match_subtitle": "66th Match"
+                }
+            ],
+            "end_date": "2023-05-19T14:00:00+00:00",
+            "home": {
+                "code": "",
+                "id": 145221,
+                "name": "Punjab Kings"
+            },
+            "id": 2719093,
+            "match_title": "Punjab Kings v Rajasthan Royals at Himachal Pradesh Cricket Association Stadium, Dharamsala (night), T20.",
+            "series": {
+                "season": "2023",
+                "series_id": 1430,
+                "series_name": "Indian Premier League",
+                "status": "Current series",
+                "updated_at": "2023-05-19T23:00:08.000000Z"
+            },
+            "series_id": 1430,
+            "start_date": "2023-05-19T14:00:00+00:00",
+            "venue": "Himachal Pradesh Cricket Association Stadium, Dharamsala (night)"
+        },
+        "live_details": {
+            "match_summary": {
+                "away_scores": "189/6 (19.4/20 ov, target 188)",
+                "home_scores": "187/5",
+                "in_play": "No",
+                "result": "Yes",
+                "status": "Royals won by 4 wkts (2b rem)",
+                "toss": "Rajasthan Royals, elected to field first"
+            },
+            "officials": {
+                "referee": "Pankaj Dharmani",
+                "umpire_1": "Nand Kishore",
+                "umpire_2": "Rod Tucker",
+                "umpire_reserve": "Parashar Joshi",
+                "umpire_tv": "Navdeep Singh"
+            },
+            "scorecard": [
+                {
+                    "batting": [
+                        {
+                            "balls": 2,
+                            "bat_order": 1,
+                            "fours": 0,
+                            "how_out": "c \u0026amp; b Boult",
+                            "minutes": "3",
+                            "player_id": 3483084,
+                            "player_name": "Prabhsimran Singh",
+                            "runs": 2,
+                            "sixes": 0,
+                            "strike_rate": "100.00"
+                        },
+                        {
+                            "balls": 12,
+                            "bat_order": 2,
+                            "fours": 2,
+                            "how_out": "lbw b Zampa",
+                            "minutes": "31",
+                            "player_id": 84717,
+                            "player_name": "Shikhar Dhawan",
+                            "runs": 17,
+                            "sixes": 1,
+                            "strike_rate": "141.66"
+                        },
+                        {
+                            "balls": 12,
+                            "bat_order": 3,
+                            "fours": 3,
+                            "how_out": "c Padikkal b Saini",
+                            "minutes": "19",
+                            "player_id": 3377886,
+                            "player_name": "Atharva Taide",
+                            "runs": 19,
+                            "sixes": 1,
+                            "strike_rate": "158.33"
+                        },
+                        {
+                            "balls": 13,
+                            "bat_order": 4,
+                            "fours": 1,
+                            "how_out": " b Saini",
+                            "minutes": "16",
+                            "player_id": 1211718,
+                            "player_name": "Liam Livingstone",
+                            "runs": 9,
+                            "sixes": 0,
+                            "strike_rate": "69.23"
+                        },
+                        {
+                            "balls": 31,
+                            "bat_order": 5,
+                            "fours": 4,
+                            "how_out": "not out",
+                            "minutes": "72",
+                            "player_id": 1988931,
+                            "player_name": "Sam Curran",
+                            "runs": 49,
+                            "sixes": 2,
+                            "strike_rate": "158.06"
+                        },
+                        {
+                            "balls": 28,
+                            "bat_order": 6,
+                            "fours": 3,
+                            "how_out": "c sub (D Ferreira) b Saini",
+                            "minutes": "36",
+                            "player_id": 2165613,
+                            "player_name": "Jitesh Sharma",
+                            "runs": 44,
+                            "sixes": 3,
+                            "strike_rate": "157.14"
+                        },
+                        {
+                            "balls": 23,
+                            "bat_order": 7,
+                            "fours": 4,
+                            "how_out": "not out",
+                            "minutes": "31",
+                            "player_id": 2159169,
+                            "player_name": "M Shahrukh Khan",
+                            "runs": 41,
+                            "sixes": 2,
+                            "strike_rate": "178.26"
+                        }
+                    ],
+                    "bowling": [
+                        {
+                            "dot_balls": 12,
+                            "economy": "8.75",
+                            "extras": "1",
+                            "fours": 3,
+                            "maidens": 0,
+                            "overs": "4",
+                            "player_id": 833748,
+                            "player_name": "Trent Boult",
+                            "runs_conceded": 35,
+                            "sixes": 2,
+                            "wickets": 1
+                        },
+                        {
+                            "dot_balls": 6,
+                            "economy": "11.50",
+                            "extras": "3",
+                            "fours": 3,
+                            "maidens": 0,
+                            "overs": "4",
+                            "player_id": 1315098,
+                            "player_name": "Sandeep Sharma",
+                            "runs_conceded": 46,
+                            "sixes": 3,
+                            "wickets": 0
+                        },
+                        {
+                            "dot_balls": 9,
+                            "economy": "10.00",
+                            "extras": "1",
+                            "fours": 6,
+                            "maidens": 0,
+                            "overs": "4",
+                            "player_id": 2100513,
+                            "player_name": "Navdeep Saini",
+                            "runs_conceded": 40,
+                            "sixes": 1,
+                            "wickets": 3
+                        },
+                        {
+                            "dot_balls": 6,
+                            "economy": "6.50",
+                            "extras": "0",
+                            "fours": 2,
+                            "maidens": 0,
+                            "overs": "4",
+                            "player_id": 1138524,
+                            "player_name": "Adam Zampa",
+                            "runs_conceded": 26,
+                            "sixes": 0,
+                            "wickets": 1
+                        },
+                        {
+                            "dot_balls": 9,
+                            "economy": "10.00",
+                            "extras": "1",
+                            "fours": 3,
+                            "maidens": 0,
+                            "overs": "4",
+                            "player_id": 1290750,
+                            "player_name": "Yuzvendra Chahal",
+                            "runs_conceded": 40,
+                            "sixes": 3,
+                            "wickets": 0
+                        }
+                    ],
+                    "current": false,
+                    "extras": 6,
+                    "extras_detail": "nb 1, w 5",
+                    "fow": "1-2 (Prabhsimran Singh, 0.2 ov), 2-38 (Atharva Taide, 3.4 ov), 3-46 (Shikhar Dhawan, 5.3 ov), 4-50 (Liam Livingstone, 6.3 ov), 5-114 (Jitesh Sharma, 13.5 ov)",
+                    "innings_number": 1,
+                    "overs": "20",
+                    "runs": 187,
+                    "still_to_bat": [
+                        {
+                            "player_id": 3505935,
+                            "player_name": "Harpreet Brar"
+                        },
+                        {
+                            "player_id": 3194448,
+                            "player_name": "Rahul Chahar"
+                        },
+                        {
+                            "player_id": 1650657,
+                            "player_name": "Kagiso Rabada"
+                        },
+                        {
+                            "player_id": 3377940,
+                            "player_name": "Arshdeep Singh"
+                        },
+                        {
+                            "player_id": 2480757,
+                            "player_name": "Nathan Ellis"
+                        }
+                    ],
+                    "title": "Punjab Kings Innings",
+                    "wickets": "5"
+                },
+                {
+                    "batting": [
+                        {
+                            "balls": 36,
+                            "bat_order": 1,
+                            "fours": 8,
+                            "how_out": "c sub (R Dhawan) b Ellis",
+                            "minutes": "-",
+                            "player_id": 3453846,
+                            "player_name": "Yashasvi Jaiswal",
+                            "runs": 50,
+                            "sixes": 0,
+                            "strike_rate": "138.88"
+                        },
+                        {
+                            "balls": 4,
+                            "bat_order": 2,
+                            "fours": 0,
+                            "how_out": "lbw b Rabada",
+                            "minutes": "-",
+                            "player_id": 926913,
+                            "player_name": "Jos Buttler",
+                            "runs": 0,
+                            "sixes": 0,
+                            "strike_rate": "0.00"
+                        },
+                        {
+                            "balls": 30,
+                            "bat_order": 3,
+                            "fours": 5,
+                            "how_out": "c Harpreet Brar b Arshdeep Singh",
+                            "minutes": "-",
+                            "player_id": 3357090,
+                            "player_name": "Devdutt Padikkal",
+                            "runs": 51,
+                            "sixes": 3,
+                            "strike_rate": "170.00"
+                        },
+                        {
+                            "balls": 3,
+                            "bat_order": 4,
+                            "fours": 0,
+                            "how_out": "c sub (R Dhawan) b Chahar",
+                            "minutes": "-",
+                            "player_id": 1277841,
+                            "player_name": "Sanju Samson",
+                            "runs": 2,
+                            "sixes": 0,
+                            "strike_rate": "66.66"
+                        },
+                        {
+                            "balls": 28,
+                            "bat_order": 5,
+                            "fours": 4,
+                            "how_out": "c Dhawan b Curran",
+                            "minutes": "-",
+                            "player_id": 2010087,
+                            "player_name": "Shimron Hetmyer",
+                            "runs": 46,
+                            "sixes": 3,
+                            "strike_rate": "164.28"
+                        },
+                        {
+                            "balls": 12,
+                            "bat_order": 6,
+                            "fours": 1,
+                            "how_out": "c Taide b Rabada",
+                            "minutes": "-",
+                            "player_id": 3238314,
+                            "player_name": "Riyan Parag",
+                            "runs": 20,
+                            "sixes": 2,
+                            "strike_rate": "166.66"
+                        },
+                        {
+                            "balls": 4,
+                            "bat_order": 7,
+                            "fours": 0,
+                            "how_out": "not out",
+                            "minutes": "-",
+                            "player_id": 3526476,
+                            "player_name": "Dhruv Jurel",
+                            "runs": 10,
+                            "sixes": 1,
+                            "strike_rate": "250.00"
+                        },
+                        {
+                            "balls": 2,
+                            "bat_order": 8,
+                            "fours": 0,
+                            "how_out": "not out",
+                            "minutes": "-",
+                            "player_id": 833748,
+                            "player_name": "Trent Boult",
+                            "runs": 1,
+                            "sixes": 0,
+                            "strike_rate": "50.00"
+                        }
+                    ],
+                    "bowling": [
+                        {
+                            "dot_balls": 9,
+                            "economy": "11.50",
+                            "extras": "2",
+                            "fours": 8,
+                            "maidens": 0,
+                            "overs": "4",
+                            "player_id": 1988931,
+                            "player_name": "Sam Curran",
+                            "runs_conceded": 46,
+                            "sixes": 1,
+                            "wickets": 1
+                        },
+                        {
+                            "dot_balls": 12,
+                            "economy": "10.00",
+                            "extras": "2",
+                            "fours": 2,
+                            "maidens": 0,
+                            "overs": "4",
+                            "player_id": 1650657,
+                            "player_name": "Kagiso Rabada",
+                            "runs_conceded": 40,
+                            "sixes": 4,
+                            "wickets": 2
+                        },
+                        {
+                            "dot_balls": 11,
+                            "economy": "10.00",
+                            "extras": "3",
+                            "fours": 4,
+                            "maidens": 0,
+                            "overs": "4",
+                            "player_id": 3377940,
+                            "player_name": "Arshdeep Singh",
+                            "runs_conceded": 40,
+                            "sixes": 2,
+                            "wickets": 1
+                        },
+                        {
+                            "dot_balls": 8,
+                            "economy": "8.50",
+                            "extras": "1",
+                            "fours": 3,
+                            "maidens": 0,
+                            "overs": "4",
+                            "player_id": 2480757,
+                            "player_name": "Nathan Ellis",
+                            "runs_conceded": 34,
+                            "sixes": 1,
+                            "wickets": 1
+                        },
+                        {
+                            "dot_balls": 5,
+                            "economy": "7.63",
+                            "extras": "0",
+                            "fours": 1,
+                            "maidens": 0,
+                            "overs": "3.4",
+                            "player_id": 3194448,
+                            "player_name": "Rahul Chahar",
+                            "runs_conceded": 28,
+                            "sixes": 1,
+                            "wickets": 1
+                        }
+                    ],
+                    "current": true,
+                    "extras": 9,
+                    "extras_detail": "lb 1, nb 1, w 7",
+                    "fow": "1-12 (Jos Buttler, 1.4 ov), 2-85 (Devdutt Padikkal, 9.5 ov), 3-90 (Sanju Samson, 10.5 ov), 4-137 (Yashasvi Jaiswal, 14.3 ov), 5-169 (Riyan Parag, 17.6 ov), 6-179 (Shimron Hetmyer, 18.5 ov)",
+                    "innings_number": 2,
+                    "overs": "19.4",
+                    "runs": 189,
+                    "still_to_bat": [
+                        {
+                            "player_id": 1138524,
+                            "player_name": "Adam Zampa"
+                        },
+                        {
+                            "player_id": 2100513,
+                            "player_name": "Navdeep Saini"
+                        },
+                        {
+                            "player_id": 1315098,
+                            "player_name": "Sandeep Sharma"
+                        },
+                        {
+                            "player_id": 1290750,
+                            "player_name": "Yuzvendra Chahal"
+                        }
+                    ],
+                    "title": "Rajasthan Royals Innings",
+                    "wickets": "6"
+                }
+            ],
+            "stats": {
+                "current_run_rate": "",
+                "last_18_balls": [
+                    {
+                        "currentOver": 19,
+                        "currentOverBall": 4,
+                        "isBoundary": true,
+                        "isBye": false,
+                        "isDismissal": false,
+                        "isLegBye": false,
+                        "isMaiden": false,
+                        "isNoBall": false,
+                        "isOverEnd": false,
+                        "isWide": false,
+                        "runs": 6
+                    },
+                    {
+                        "currentOver": 19,
+                        "currentOverBall": 3,
+                        "isBoundary": false,
+                        "isBye": false,
+                        "isDismissal": false,
+                        "isLegBye": false,
+                        "isMaiden": false,
+                        "isNoBall": false,
+                        "isOverEnd": false,
+                        "isWide": false,
+                        "runs": 1
+                    },
+                    {
+                        "currentOver": 19,
+                        "currentOverBall": 2,
+                        "isBoundary": false,
+                        "isBye": false,
+                        "isDismissal": false,
+                        "isLegBye": false,
+                        "isMaiden": false,
+                        "isNoBall": false,
+                        "isOverEnd": false,
+                        "isWide": false,
+                        "runs": 1
+                    },
+                    {
+                        "currentOver": 19,
+                        "currentOverBall": 1,
+                        "isBoundary": false,
+                        "isBye": false,
+                        "isDismissal": false,
+                        "isLegBye": false,
+                        "isMaiden": false,
+                        "isNoBall": false,
+                        "isOverEnd": false,
+                        "isWide": false,
+                        "runs": 2
+                    },
+                    {
+                        "currentOver": 18,
+                        "currentOverBall": 6,
+                        "isBoundary": false,
+                        "isBye": false,
+                        "isDismissal": false,
+                        "isLegBye": false,
+                        "isMaiden": false,
+                        "isNoBall": false,
+                        "isOverEnd": true,
+                        "isWide": false,
+                        "runs": 0
+                    },
+                    {
+                        "currentOver": 18,
+                        "currentOverBall": 5,
+                        "isBoundary": false,
+                        "isBye": false,
+                        "isDismissal": true,
+                        "isLegBye": false,
+                        "isMaiden": false,
+                        "isNoBall": false,
+                        "isOverEnd": false,
+                        "isWide": false,
+                        "runs": 0
+                    },
+                    {
+                        "currentOver": 18,
+                        "currentOverBall": 4,
+                        "isBoundary": true,
+                        "isBye": false,
+                        "isDismissal": false,
+                        "isLegBye": false,
+                        "isMaiden": false,
+                        "isNoBall": false,
+                        "isOverEnd": false,
+                        "isWide": false,
+                        "runs": 4
+                    },
+                    {
+                        "currentOver": 18,
+                        "currentOverBall": 3,
+                        "isBoundary": false,
+                        "isBye": false,
+                        "isDismissal": false,
+                        "isLegBye": false,
+                        "isMaiden": false,
+                        "isNoBall": false,
+                        "isOverEnd": false,
+                        "isWide": false,
+                        "runs": 1
+                    },
+                    {
+                        "currentOver": 18,
+                        "currentOverBall": 2,
+                        "isBoundary": false,
+                        "isBye": false,
+                        "isDismissal": false,
+                        "isLegBye": false,
+                        "isMaiden": false,
+                        "isNoBall": false,
+                        "isOverEnd": false,
+                        "isWide": false,
+                        "runs": 1
+                    },
+                    {
+                        "currentOver": 18,
+                        "currentOverBall": 1,
+                        "isBoundary": true,
+                        "isBye": false,
+                        "isDismissal": false,
+                        "isLegBye": false,
+                        "isMaiden": false,
+                        "isNoBall": false,
+                        "isOverEnd": false,
+                        "isWide": false,
+                        "runs": 4
+                    },
+                    {
+                        "currentOver": 17,
+                        "currentOverBall": 6,
+                        "isBoundary": false,
+                        "isBye": false,
+                        "isDismissal": true,
+                        "isLegBye": false,
+                        "isMaiden": false,
+                        "isNoBall": false,
+                        "isOverEnd": true,
+                        "isWide": false,
+                        "runs": 0
+                    },
+                    {
+                        "currentOver": 17,
+                        "currentOverBall": 5,
+                        "isBoundary": false,
+                        "isBye": false,
+                        "isDismissal": false,
+                        "isLegBye": false,
+                        "isMaiden": false,
+                        "isNoBall": false,
+                        "isOverEnd": false,
+                        "isWide": false,
+                        "runs": 0
+                    },
+                    {
+                        "currentOver": 17,
+                        "currentOverBall": 4,
+                        "isBoundary": false,
+                        "isBye": false,
+                        "isDismissal": false,
+                        "isLegBye": false,
+                        "isMaiden": false,
+                        "isNoBall": false,
+                        "isOverEnd": false,
+                        "isWide": false,
+                        "runs": 0
+                    },
+                    {
+                        "currentOver": 17,
+                        "currentOverBall": 4,
+                        "isBoundary": false,
+                        "isBye": false,
+                        "isDismissal": false,
+                        "isLegBye": false,
+                        "isMaiden": false,
+                        "isNoBall": false,
+                        "isOverEnd": false,
+                        "isWide": true,
+                        "runs": 1
+                    },
+                    {
+                        "currentOver": 17,
+                        "currentOverBall": 3,
+                        "isBoundary": false,
+                        "isBye": false,
+                        "isDismissal": false,
+                        "isLegBye": false,
+                        "isMaiden": false,
+                        "isNoBall": false,
+                        "isOverEnd": false,
+                        "isWide": false,
+                        "runs": 0
+                    },
+                    {
+                        "currentOver": 17,
+                        "currentOverBall": 2,
+                        "isBoundary": true,
+                        "isBye": false,
+                        "isDismissal": false,
+                        "isLegBye": false,
+                        "isMaiden": false,
+                        "isNoBall": false,
+                        "isOverEnd": false,
+                        "isWide": false,
+                        "runs": 6
+                    },
+                    {
+                        "currentOver": 17,
+                        "currentOverBall": 1,
+                        "isBoundary": true,
+                        "isBye": false,
+                        "isDismissal": false,
+                        "isLegBye": false,
+                        "isMaiden": false,
+                        "isNoBall": false,
+                        "isOverEnd": false,
+                        "isWide": false,
+                        "runs": 6
+                    },
+                    {
+                        "currentOver": 17,
+                        "currentOverBall": 1,
+                        "isBoundary": false,
+                        "isBye": false,
+                        "isDismissal": false,
+                        "isLegBye": false,
+                        "isMaiden": false,
+                        "isNoBall": true,
+                        "isOverEnd": false,
+                        "isWide": false,
+                        "runs": 1
+                    }
+                ],
+                "last_update": "2023-05-19T17:56:38+00:00",
+                "min_remaining_overs": "",
+                "partnership_overs": "0.5",
+                "partnership_player_1": "Trent Boult",
+                "partnership_player_1_balls": 2,
+                "partnership_player_1_runs": 1,
+                "partnership_player_2": "Dhruv Jurel",
+                "partnership_player_2_balls": 3,
+                "partnership_player_2_runs": 9,
+                "partnership_run_rate": "12",
+                "partnership_runs": 10
+            },
+            "teamsheets": {
+                "away": [
+                    {
+                        "player_id": 3453846,
+                        "player_name": "Yashasvi Jaiswal",
+                        "position": "Unknown"
+                    },
+                    {
+                        "player_id": 926913,
+                        "player_name": "Jos Buttler",
+                        "position": "Unknown"
+                    },
+                    {
+                        "player_id": 1277841,
+                        "player_name": "Sanju Samson",
+                        "position": "Wicketkeeper"
+                    },
+                    {
+                        "player_id": 3357090,
+                        "player_name": "Devdutt Padikkal",
+                        "position": "Unknown"
+                    },
+                    {
+                        "player_id": 2010087,
+                        "player_name": "Shimron Hetmyer",
+                        "position": "Unknown"
+                    },
+                    {
+                        "player_id": 3238314,
+                        "player_name": "Riyan Parag",
+                        "position": "Unknown"
+                    },
+                    {
+                        "player_id": 1138524,
+                        "player_name": "Adam Zampa",
+                        "position": "Bowler"
+                    },
+                    {
+                        "player_id": 833748,
+                        "player_name": "Trent Boult",
+                        "position": "Bowler"
+                    },
+                    {
+                        "player_id": 2100513,
+                        "player_name": "Navdeep Saini",
+                        "position": "Bowler"
+                    },
+                    {
+                        "player_id": 1315098,
+                        "player_name": "Sandeep Sharma",
+                        "position": "Bowler"
+                    },
+                    {
+                        "player_id": 1290750,
+                        "player_name": "Yuzvendra Chahal",
+                        "position": "Bowler"
+                    }
+                ],
+                "home": [
+                    {
+                        "player_id": 84717,
+                        "player_name": "Shikhar Dhawan",
+                        "position": "Unknown"
+                    },
+                    {
+                        "player_id": 3483084,
+                        "player_name": "Prabhsimran Singh",
+                        "position": "Unknown"
+                    },
+                    {
+                        "player_id": 3377886,
+                        "player_name": "Atharva Taide",
+                        "position": "Allrounder"
+                    },
+                    {
+                        "player_id": 1211718,
+                        "player_name": "Liam Livingstone",
+                        "position": "Allrounder"
+                    },
+                    {
+                        "player_id": 1988931,
+                        "player_name": "Sam Curran",
+                        "position": "Allrounder"
+                    },
+                    {
+                        "player_id": 2165613,
+                        "player_name": "Jitesh Sharma",
+                        "position": "Wicketkeeper"
+                    },
+                    {
+                        "player_id": 2159169,
+                        "player_name": "M Shahrukh Khan",
+                        "position": "Unknown"
+                    },
+                    {
+                        "player_id": 3505935,
+                        "player_name": "Harpreet Brar",
+                        "position": "Bowler"
+                    },
+                    {
+                        "player_id": 3194448,
+                        "player_name": "Rahul Chahar",
+                        "position": "Bowler"
+                    },
+                    {
+                        "player_id": 1650657,
+                        "player_name": "Kagiso Rabada",
+                        "position": "Bowler"
+                    },
+                    {
+                        "player_id": 3377940,
+                        "player_name": "Arshdeep Singh",
+                        "position": "Bowler"
+                    }
+                ]
+            }
+        }
+    }
+}
