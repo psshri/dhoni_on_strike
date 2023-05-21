@@ -86,3 +86,14 @@ go get github.com/go-telegram-bot-api/telegram-bot-api
 - then setup everything using github actions
 - then setup everything using aws sdk
 - containerize your code and then run it in aws lambda
+
+
+### how to containerize the golang application
+- create the docker file
+- run the following command to build the image
+docker build -t dhonionstrike:golang .
+- run the following command to run the container
+docker run -it dhonionstrike:golang
+- create env.list file to store all the hardcoded values
+- execute the following command to run the container
+docker run -it --env-file env.list dhonionstrike:golang

@@ -89,10 +89,24 @@ func main() {
 	fixtures_data_path := "checkSchedule/fixtures.json"
 	live_score_data_path := "checkLiveScore/live_score.json"
 	ipl_series_id := 1430
-	team_name := "Punjab Kings"
-	team_id := 145221
-	player_name := "Shikhar Dhawan"
-	player_id := 84717
+
+	// team_id := 145221
+	team_id_str := os.Getenv("TEAM_ID")
+	team_id, err := strconv.Atoi(team_id_str)
+	if err != nil {
+		team_id = 145221
+	}
+
+	// player_id := 84717
+	player_id_str := os.Getenv("PLAYER_ID")
+	player_id, err := strconv.Atoi(player_id_str)
+	if err != nil {
+		player_id = 84717
+	}
+
+	// player_name := "Shikhar Dhawan"
+	player_name := os.Getenv("PLAYER_NAME")
+	team_name := os.Getenv("TEAM_NAME")
 
 	checkSchedule.Get_schedule(fixtures_url, xRapidAPIHost, info_file_path, today_string, fixtures_data_path)
 
