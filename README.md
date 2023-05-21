@@ -78,3 +78,9 @@ table columns:
 - docker run -it -e PLAYER_ID=84717 -e TEAM_ID=145221 dhonionstrike:python
 - alternatively, you can create a file for all the env variables and pass this file during docker run command
 - docker run -it --env-file env.list dhonionstrike:python
+
+run the following commands to tag the image and push it to dockerhub
+docker tag dhonionstrike:python psshri/dhoni_on_strike:python-v1.0
+docker login
+docker push psshri/dhoni_on_strike:python-v1.0
+docker pull psshri/dhoni_on_strike:python-v1.0
