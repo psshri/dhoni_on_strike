@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: dhoni-on-strike-configmap
+data:
+  PLAYER_ID: "84717"
+  PLAYER_NAME: "145221"
+  TEAM_ID: "Shikhar Dhawan"
+  TEAM_NAME: "Punjab Kings"
