@@ -5,6 +5,7 @@ import schedule
 import time
 import requests
 import json
+import os
 
 from checkSchedule.checkSchedule import get_schedule, evaluate_schedule
 from checkLiveScore.checkLiveScore import get_live_score, is_batting
@@ -51,10 +52,16 @@ info_file_path = 'config/info.json'
 # today_string = func_today_string()
 today_string = "2023-05-19"
 ipl_series_id = 1430
-team_name = "Punjab Kings" 
-team_id = 145221
-player_name = "Shikhar Dhawan"
-player_id = 84717
+# team_name = "Punjab Kings" 
+# team_id = 145221
+# player_name = "Shikhar Dhawan"
+# player_id = 84717
+team_id = os.environ.get('TEAM_ID')
+team_id = int(team_id)
+team_name = os.environ.get('TEAM_NAME')
+player_id = os.environ.get('PLAYER_ID')
+player_id = int(player_id)
+player_name = os.environ.get('PLAYER_NAME')
 fixture_data_path = "checkSchedule/fixtures.json"
 live_score_data_path = "checkLiveScore/live_score.json"
 

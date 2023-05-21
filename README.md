@@ -1,6 +1,8 @@
 # dhoni_on_strike
 This application notifies the end user whenever MS Dhoni is out on the pitch to bat!
 
+NOTE
+make sure to update the today_string at last
 
 ### todos:
 - research the capabilities of aws lambda
@@ -70,4 +72,9 @@ table columns:
 - docker build -t dhonionstrike:python .  (build the image)
 - docker run -it dhonionstrike:python (run the container)
 - the resultant image was 900MB large, so i used alpine version of base image as they are lightweight, then the size came down to 57MB
-- use tools like docker-slim to find out how to optimize your container
+- you can use tools like docker-slim to find out how to optimize your container
+- use env variables to provide values of variable like player_id, team_id during the container run command, instead of hardcoding them; edit the main.py and add ENV to dockerfile
+- after editing the files, rebuild the docker image using the above command and now use the below command to run the container
+- docker run -it -e PLAYER_ID=84717 -e TEAM_ID=145221 dhonionstrike:python
+- alternatively, you can create a file for all the env variables and pass this file during docker run command
+- docker run -it --env-file env.list dhonionstrike:python

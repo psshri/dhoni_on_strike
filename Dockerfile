@@ -16,5 +16,9 @@ COPY src/checkLiveScore/checkLiveScore.py checkLiveScore/
 COPY src/checkSchedule/checkSchedule.py checkSchedule/
 COPY src/main.py .
 
+# set the default values for environment variables
+ENV TEAM_ID=145221
+ENV PLAYER_ID=84717
+
 # specify the command to run your application
 CMD ["python", "main.py"]
