@@ -105,3 +105,4 @@ docker push new-repo:tagname
 docker tag dhonionstrike:golang psshri/dhoni_on_strike:golang-v1.0
 docker login
 docker push psshri/dhoni_on_strike:golang-v1.0
+docker pull psshri/dhoni_on_strike:golang-v1.0
