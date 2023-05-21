@@ -97,3 +97,11 @@ docker run -it dhonionstrike:golang
 - create env.list file to store all the hardcoded values
 - execute the following command to run the container
 docker run -it --env-file env.list dhonionstrike:golang
+- create a repository in dockerhub (repository name: dhoni_on_strike)
+- run the following commands to push the image to this repo
+docker tag local-image:tagname new-repo:tagname
+docker push new-repo:tagname
+
+docker tag dhonionstrike:golang psshri/dhoni_on_strike:golang-v1.0
+docker login
+docker push psshri/dhoni_on_strike:golang-v1.0
