@@ -61,3 +61,13 @@ table columns:
 - id
 - date
 - 
+
+
+### steps followed to  containerize this python app
+- create the dockerfile
+- create the requirements.txt file. this file lists all the python packages required by your application
+- copy only the relevant files from src to your container
+- docker build -t dhonionstrike:python .  (build the image)
+- docker run -it dhonionstrike:python (run the container)
+- the resultant image was 900MB large, so i used alpine version of base image as they are lightweight, then the size came down to 57MB
+- use tools like docker-slim to find out how to optimize your container
