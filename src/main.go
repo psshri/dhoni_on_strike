@@ -119,6 +119,11 @@ func main() {
 	if match_today == 1 {
 
 		// Create a ticker that ticks every 2 seconds
+
+		fmt.Println()
+		fmt.Println(team_name + "' match is today!")
+		fmt.Println()
+
 		ticker := time.NewTicker(2 * time.Second)
 
 		// Start a goroutine to execute the functions periodically
@@ -137,7 +142,7 @@ func main() {
 		select {}
 
 	} else {
-		print("No", team_name, "match today!")
+		fmt.Println("No " + team_name + " match today!")
 	}
 
 	fmt.Println(match_time_330)

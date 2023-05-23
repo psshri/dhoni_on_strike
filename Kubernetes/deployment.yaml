@@ -14,7 +14,8 @@ spec:
     spec:
       containers:
       - name: dhoni-on-strike-containers
-        image: psshri/dhoni_on_strike:golang-v1.0
+        image: dhonionstrike:golang-v1.0
+        imagePullPolicy: IfNotPresent
         envFrom:
         - configMapRef:
             name: dhoni-on-strike-configmap
