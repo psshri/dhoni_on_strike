@@ -106,3 +106,9 @@ docker tag dhonionstrike:golang psshri/dhoni_on_strike:golang-v1.0
 docker login
 docker push psshri/dhoni_on_strike:golang-v1.0
 docker pull psshri/dhoni_on_strike:golang-v1.0
+
+### next
+- run your app in aws lambda
+- then figure out a way to handle the secrets securely
+
+### aws lambda
