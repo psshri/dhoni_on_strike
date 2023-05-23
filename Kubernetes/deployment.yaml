@@ -40,8 +40,8 @@ spec:
               configMapKeyRef:
                 name: dhoni-on-strike-configmap
                 key: team_name
-          - name: INTERVAL
-            valueFrom:
-              configMapKeyRef:
-                name: dhoni-on-strike-configmap
-                key: interval
+        #   - name: INTERVAL
+        #     valueFrom:
+        #       configMapKeyRef:
+        #         name: dhoni-on-strike-configmap
+        #         key: interval

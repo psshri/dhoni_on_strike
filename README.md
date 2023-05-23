@@ -90,16 +90,16 @@ go get github.com/go-telegram-bot-api/telegram-bot-api
 ### how to containerize the golang application
 - create the docker file
 - run the following command to build the image
-docker build -t dhonionstrike:golang .
+docker build -t dhoni_on_strike:golang-v1.0 .
 - run the following command to run the container
-docker run -it dhonionstrike:golang
+docker run -it dhoni_on_strike:golang-v1.0
 - create env.list file to store all the hardcoded values
 - execute the following command to run the container
-docker run -it --env-file env.list dhonionstrike:golang
+docker run -it --env-file env.list dhoni_on_strike:golang-v1.0
 - create a repository in dockerhub (repository name: dhoni_on_strike)
 - run the following commands to push the image to this repo
-docker tag local-image:tagname new-repo:tagname
-docker push new-repo:tagname
+docker tag dhoni_on_strike:golang-v1.0 psshri/dhoni_on_strike:golang-v1.0
+docker push psshri/dhoni_on_strike:golang-v1.0
 
 docker tag dhonionstrike:golang psshri/dhoni_on_strike:golang-v1.0
 docker login
@@ -111,3 +111,7 @@ docker pull psshri/dhoni_on_strike:golang-v1.0
 - then figure out a way to handle the secrets securely
 
 ### aws lambda
+
+
+error:
+this setup works well in cka killershell, identify whats the issue here
