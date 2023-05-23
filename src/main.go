@@ -108,6 +108,12 @@ func main() {
 	player_name := os.Getenv("PLAYER_NAME")
 	team_name := os.Getenv("TEAM_NAME")
 
+	interval_str := os.Getenv("INTERVAL")
+	interval, err := strconv.Atoi(interval_str)
+	if err != nil {
+		interval = 300
+	}
+
 	checkSchedule.Get_schedule(fixtures_url, xRapidAPIHost, info_file_path, today_string, fixtures_data_path)
 
 	match_today, match_time_330, match_time_730, matchInfo, err := checkSchedule.Evaluate_schedule(fixtures_data_path, ipl_series_id, team_id, today_string)
@@ -124,7 +130,7 @@ func main() {
 		fmt.Println(team_name + "' match is today!")
 		fmt.Println()
 
-		ticker := time.NewTicker(2 * time.Second)
+		ticker := time.NewTicker(time.Duration(interval) * time.Second)
 
 		// Start a goroutine to execute the functions periodically
 		go func() {
@@ -143,9 +149,18 @@ func main() {
 
 	} else {
 		fmt.Println("No " + team_name + " match today!")
+		fmt.Println("player_name: ", player_name)
+		fmt.Println("team_name: ", team_name)
+		fmt.Println("player_id: ", player_id)
+		fmt.Println("team_id: ", team_id)
+		fmt.Println("match_time_330: ", match_time_330)
+		fmt.Println("match_time_730: ", match_time_730)
 	}
 
-	fmt.Println(match_time_330)
-	fmt.Println(match_time_730)
-
+	fmt.Println("player_name: ", player_name)
+	fmt.Println("team_name: ", team_name)
+	fmt.Println("player_id: ", player_id)
+	fmt.Println("team_id: ", team_id)
+	fmt.Println("match_time_330: ", match_time_330)
+	fmt.Println("match_time_730: ", match_time_730)
 }

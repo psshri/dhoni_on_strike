@@ -48,7 +48,6 @@ the above line of code is required to setup the connection between mysql and gol
 - also find out how you can build your container so that it is not tied to any team_name or player_name, the user should be able to pass on those values
 
 
-
 ### flow 
 - parse the fixtures and store it in mysql db/table
 - hit the score api every few mins and get the current score and evaluate whether a particular player is on strike or not
