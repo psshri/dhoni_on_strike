@@ -3,13 +3,8 @@ kind: ConfigMap
 metadata:
   name: dhoni-on-strike-configmap
 data:
-  # PLAYER_ID: "84717"
-  # PLAYER_NAME: "Shikhar Dhawan"
-  # TEAM_ID: "145221"
-  # TEAM_NAME: "Punjab Kings"
-  # INTERVAL: "2"
-  player_id: "84717"
-  player_name: "Shikhar Dhawan"
-  team_id: "145221"
-  team_name: "Punjab Kings"
-  # interval: "2"
+  PLAYER_ID: "84717"
+  PLAYER_NAME: "Shikhar Dhawan"
+  TEAM_ID: "145221"
+  TEAM_NAME: "Punjab Kings"
+  INTERVAL: "2"
