@@ -2,6 +2,7 @@
 
 minikube start
 minikube profile list
+minikube delete --profile <profile-name>
 kubectl apply -f configMap.yaml
 kubectl apply -f deployment.yaml
 
