@@ -62,6 +62,8 @@ team_name = os.environ.get('TEAM_NAME')
 player_id = os.environ.get('PLAYER_ID')
 player_id = int(player_id)
 player_name = os.environ.get('PLAYER_NAME')
+interval = os.environ.get('INTERVAL')
+interval = int(interval)
 fixture_data_path = "checkSchedule/fixtures.json"
 live_score_data_path = "checkLiveScore/live_score.json"
 
@@ -77,11 +79,11 @@ def update_counter():
 def print_status(counter):
     print("\n")
     if counter['value'] == 1:
-        print(player_name, "is on strike!")
+        print(player_name + " is on strike!")
         telegram_bot_send_text(player_name, info_file_path)
 
     else:
-        print(team_name +"'" ,"match is today,", player_name, "is yet to bat!")
+        print(team_name +"'" + " match is today, " + player_name + " is yet to bat!")
     print("\n")
 
 # function calls ###################################################
@@ -94,19 +96,19 @@ if match_today == 1:
     # get_live_score(match_info, live_score_url, info_file_path, X_RapidAPI_Host, live_score_data_path)
     # counter = is_batting(live_score_data_path, player_id)
 
-    schedule.every(2).seconds.do(get_live_score, match_info=match_info,
+    schedule.every(interval).seconds.do(get_live_score, match_info=match_info,
                                   url=live_score_url,
                                   info_file_path=info_file_path,
                                   X_RapidAPI_Host=X_RapidAPI_Host,
                                   live_score_data_path=live_score_data_path)
 
-    schedule.every(2).seconds.do(update_counter)
+    schedule.every(interval).seconds.do(update_counter)
 
-    schedule.every(2).seconds.do(print_status, counter=counter)
+    schedule.every(interval).seconds.do(print_status, counter=counter)
 
     while True:
         schedule.run_pending()
         time.sleep(1)
 
 else:
-    print("No", team_name ,"match today!")
+    print("No" + team_name + "' match today!")

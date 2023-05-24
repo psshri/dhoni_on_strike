@@ -84,3 +84,8 @@ docker tag dhonionstrike:python psshri/dhoni_on_strike:python-v1.0
 docker login
 docker push psshri/dhoni_on_strike:python-v1.0
 docker pull psshri/dhoni_on_strike:python-v1.0
+
+docker build -t dhoni_on_strike:python-v1.0 .
+docker run -it --env-file env.list dhoni_on_strike:python-v1.0
+docker tag dhoni_on_strike:python-v1.0 psshri/dhoni_on_strike:python-v1.0
+docker push psshri/dhoni_on_strike:python-v1.0
