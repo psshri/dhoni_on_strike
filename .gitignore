@@ -6,3 +6,4 @@ dbDetails.json
 **/__pycache__/
 go.mod
 go.sum
+aws.txt
