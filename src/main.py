@@ -34,7 +34,7 @@ def telegram_bot_send_text(player_name, info_file_path):
     bot_token = data['telegram_bot_token']
     chat_id = data['telegram_chat_id']
 
-    message = player_name + 'is on strike\\!'
+    message = player_name + ' is on strike\\!'
     
     url = 'https://api.telegram.org/bot' + bot_token + '/sendMessage?chat_id=' \
           + chat_id + '&parse_mode=MarkdownV2&text=' + message
