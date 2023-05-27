@@ -100,19 +100,6 @@ docker push psshri/dhoni_on_strike:python-v1.0
 - also, as per above article, request module is to be imported via boto library
 
 
-### pushing the python container to amazon ecr
-- create a public repository
-- install aws cli in ubuntu, follow this link (https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
-- to authorize, you will need Access Key ID and Secret Access Key
-- create a user (from iam and not identity center) just for cli access and get access key id and secret access key
-- tag the image using the below command
-<!-- docker tag dhoni_on_strike:python-v1.0 public.ecr.aws/x6i9k3w4/dhoni_on_strike:python-v1.0 -->
-docker tag dhoni_on_strike:python-v1.0 014935736506.dkr.ecr.us-east-1.amazonaws.com/dhoni_on_strike:python-v1.0
-- retrieve an authentication token and authenticate your docker client to your registry, run the following command
-<!-- aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/x6i9k3w4 -->
-aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 014935736506.dkr.ecr.us-east-1.amazonaws.com
-- push the image using the following command
-docker push 014935736506.dkr.ecr.us-east-1.amazonaws.com/dhoni_on_strike:python-v1.0
 
 ### running python container in aws lambda
 - write functionality is not available during aws lambda invocation, you have to use /tmp directory if you want to store some data, so we had to modify the fixtures_data_path and live score data path to /tmp, otherwise you can store the file in s3,
