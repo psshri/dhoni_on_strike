@@ -19,9 +19,7 @@ def func_today_string():
     today_string = today.strftime("%Y-%m-%d")
     return today_string
 
-def telegram_bot_send_text(player_name, telegram_bot_token, telegram_chat_id):
-
-    message = player_name + ' is on strike\\!'
+def telegram_bot_send_text(message, telegram_bot_token, telegram_chat_id):
     
     url = 'https://api.telegram.org/bot' + telegram_bot_token + '/sendMessage?chat_id=' \
           + telegram_chat_id + '&parse_mode=MarkdownV2&text=' + message
@@ -92,7 +90,8 @@ def print_status(counter):
     print("\n")
     if counter['value'] == 1:
         print(player_name + " is on strike!")
-        telegram_bot_send_text(player_name, telegram_bot_token, telegram_chat_id)
+        message = player_name + ' is on strike\\!'
+        telegram_bot_send_text(message, telegram_bot_token, telegram_chat_id)
 
     else:
         print(team_name +"'" + " match is today, " + player_name + " is yet to bat!")
@@ -121,4 +120,6 @@ if match_today == 1:
         time.sleep(1)
 
 else:
-    print("No" + team_name + "' match today!")
+    print("No " + team_name + "' match today!")
+    message = 'No ' + team_name + ' match today\\!'
+    telegram_bot_send_text(message, telegram_bot_token, telegram_chat_id)
