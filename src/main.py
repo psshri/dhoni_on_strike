@@ -64,8 +64,8 @@ player_id = int(player_id)
 player_name = os.environ.get('PLAYER_NAME')
 interval = os.environ.get('INTERVAL')
 interval = int(interval)
-fixture_data_path = "checkSchedule/fixtures.json"
-live_score_data_path = "checkLiveScore/live_score.json"
+fixture_data_path = "/tmp/fixtures.json"
+live_score_data_path = "/tmp/live_score.json"
 
 # functions ########################################################
 

@@ -17,8 +17,11 @@ COPY src/checkSchedule/checkSchedule.py checkSchedule/
 COPY src/main.py .
 
 # set the default values for environment variables
-# ENV TEAM_ID=145221
-# ENV PLAYER_ID=84717
+ENV PLAYER_ID=84717
+ENV TEAM_ID=145221
+ENV PLAYER_NAME="Shikhar Dhawan"
+ENV TEAM_NAME="Punjab Kings"
+ENV INTERVAL=2
 
 # specify the command to run your application
 CMD ["python", "main.py"]
