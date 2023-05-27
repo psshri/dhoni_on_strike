@@ -64,6 +64,10 @@ table columns:
 - date
 - 
 
+### optimizations in code
+- add a line to output when the api limit is reached, usme try except wala block bhi dalo
+- secret keys ko as an environment variables pass karo aur aws lambda me env variable create karo unke liye and encrypt bhi karo
+
 
 ### steps followed to  containerize this python app
 - create the dockerfile
@@ -116,3 +120,4 @@ docker push 014935736506.dkr.ecr.us-east-1.amazonaws.com/dhoni_on_strike:python-
 - the lambda function stops after 3 seconds of running, to resolve this do the following
 lambda fn > configuration > general configuration > edit timeout
 - aws lambda can run for a maximum of 15 mins, so use step functions to invoke the lambda function repeatedly after 15 mins, now there are multiple areas of optimization that are possible now
+- to provide the environment variables go to configuration > environment variables
