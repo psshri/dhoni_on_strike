@@ -121,3 +121,11 @@ docker push 014935736506.dkr.ecr.us-east-1.amazonaws.com/dhoni_on_strike:python-
 lambda fn > configuration > general configuration > edit timeout
 - aws lambda can run for a maximum of 15 mins, so use step functions to invoke the lambda function repeatedly after 15 mins, now there are multiple areas of optimization that are possible now
 - to provide the environment variables go to configuration > environment variables
+
+
+### create a secret in aws secrets manager
+- write an aws sdk script to do this thing
+- create a secret in secrets manager
+- modify the python code to read secrets from secrets manager secret_name
+- create img, push, import it into lambda
+- grant the lambda with permission to read the secret from secrets manager

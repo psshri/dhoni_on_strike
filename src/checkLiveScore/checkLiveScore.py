@@ -8,28 +8,13 @@ import json
 
 #####################################################################
 
-# functions #########################################################
-
-def readAPIkey(file_path):
-    try:
-        with open(file_path, 'r') as file:
-            data = json.load(file)
-        return data['rapidAPI_api_key']
-    except FileNotFoundError:
-        print(f"Error: File '{file_path}' not found.")
-    except IOError:
-        print(f"Error: Unable to read file '{file_path}'.")
-
-#####################################################################
-
 # get live score
-def get_live_score(match_info, url, info_file_path, X_RapidAPI_Host, live_score_data_path):
+def get_live_score(match_info, url, rapidAPI_api_key, X_RapidAPI_Host, live_score_data_path):
     match_id = match_info.id
     url = url + str(match_id)
-    X_RapidAPI_Key = readAPIkey(info_file_path)
 
     headers = {
-        "X-RapidAPI-Key": X_RapidAPI_Key,
+        "X-RapidAPI-Key": rapidAPI_api_key,
         "X-RapidAPI-Host": X_RapidAPI_Host
     }
 

@@ -22,6 +22,7 @@ ENV TEAM_ID=145221
 ENV PLAYER_NAME="Shikhar Dhawan"
 ENV TEAM_NAME="Punjab Kings"
 ENV INTERVAL=2
+ENV SECRET_NAME="dhoni_on_strike"
 
 # specify the command to run your application
 CMD ["python", "main.py"]

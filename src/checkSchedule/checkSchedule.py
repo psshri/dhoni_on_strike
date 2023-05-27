@@ -9,29 +9,13 @@ from collections import namedtuple
 
 #####################################################################
 
-# functions #########################################################
-
-def readAPIkey(file_path):
-    try:
-        with open(file_path, 'r') as file:
-            data = json.load(file)
-        return data['rapidAPI_api_key']
-    except FileNotFoundError:
-        print(f"Error: File '{file_path}' not found.")
-    except IOError:
-        print(f"Error: Unable to read file '{file_path}'.")
-
-#####################################################################
-
 
 # get today's match schedule
-def get_schedule(url, X_RapidAPI_Host, info_file_path, today_string, fixture_data_path):
-
-    X_RapidAPI_Key = readAPIkey(info_file_path)
+def get_schedule(url, X_RapidAPI_Host, rapidAPI_api_key, today_string, fixture_data_path):
     
     url = url + today_string
     headers = {
-	    "X-RapidAPI-Key": X_RapidAPI_Key,
+	    "X-RapidAPI-Key": rapidAPI_api_key,
 	    "X-RapidAPI-Host": X_RapidAPI_Host
     }
 
