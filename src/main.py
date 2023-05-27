@@ -49,8 +49,8 @@ X_RapidAPI_Host = "cricket-live-data.p.rapidapi.com"
 
 info_file_path = 'config/info.json'
 
-# today_string = func_today_string()
-today_string = "2023-05-19"
+today_string = func_today_string()
+# today_string = "2023-05-19"
 ipl_series_id = 1430
 # team_name = "Punjab Kings" 
 # team_id = 145221
@@ -111,4 +111,4 @@ if match_today == 1:
         time.sleep(1)
 
 else:
-    print("No" + team_name + "' match today!")
+    print("No " + team_name + "' match today!")
