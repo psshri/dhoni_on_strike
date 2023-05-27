@@ -27,14 +27,12 @@ def func_today_string():
     today_string = today.strftime("%Y-%m-%d")
     return today_string
 
-def telegram_bot_send_text(player_name, info_file_path):
+def telegram_bot_send_text(message, info_file_path):
     with open(info_file_path, 'r') as file:
         data = json.load(file)
 
     bot_token = data['telegram_bot_token']
     chat_id = data['telegram_chat_id']
-
-    message = player_name + ' is on strike\\!'
     
     url = 'https://api.telegram.org/bot' + bot_token + '/sendMessage?chat_id=' \
           + chat_id + '&parse_mode=MarkdownV2&text=' + message
@@ -80,7 +78,8 @@ def print_status(counter):
     print("\n")
     if counter['value'] == 1:
         print(player_name + " is on strike!")
-        telegram_bot_send_text(player_name, info_file_path)
+        message = player_name + ' is on strike\\!'
+        telegram_bot_send_text(message, info_file_path)
 
     else:
         print(team_name +"'" + " match is today, " + player_name + " is yet to bat!")
@@ -112,3 +111,5 @@ if match_today == 1:
 
 else:
     print("No " + team_name + "' match today!")
+    message = 'No ' + team_name + ' match today\\!'
+    telegram_bot_send_text(message, info_file_path)
