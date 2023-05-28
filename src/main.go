@@ -1,75 +1,85 @@
 package main
 
 import (
+	"context"
 	"encoding/json"
 	"fmt"
-	"io/ioutil"
 	"log"
 	"os"
 	"src/checkLiveScore"
 	"src/checkSchedule"
 	"strconv"
-	"syscall"
 	"time"
 
 	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api"
+
+	"github.com/aws/aws-lambda-go/lambda"
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
+	"github.com/aws/aws-sdk-go/service/secretsmanager"
 )
 
-func print_status(counter int, player_name string, team_name string, info_file_path string) {
+func print_status(counter int, player_name string, team_name string, telegram_bot_token string, telegram_chat_id string) {
 	fmt.Println()
 	if counter == 1 {
 		fmt.Println(player_name, "is on strike!")
-		telegram_bot_send_text(player_name, info_file_path)
+		message := player_name + " is on strike!"
+		telegram_bot_send_text(message, telegram_bot_token, telegram_chat_id)
 	} else {
 		fmt.Println(team_name+"'", "match is today,", player_name, "is yet to bat!")
+		message := team_name + "'" + " match is today, " + player_name + " is yet to bat!"
+		telegram_bot_send_text(message, telegram_bot_token, telegram_chat_id)
 	}
 	fmt.Println()
 }
 
-func telegramKeys(info_file_path string) (string, string, error) {
-	file, err := ioutil.ReadFile(info_file_path)
+func get_secret(secret_name string) (string, string, string) {
+	region := "us-east-1"
+	sess := session.Must(session.NewSession())
+	svc := secretsmanager.New(sess, aws.NewConfig().WithRegion(region))
+
+	result, err := svc.GetSecretValue(&secretsmanager.GetSecretValueInput{SecretId: &secret_name})
 	if err != nil {
-		if e, ok := err.(*os.PathError); ok && e.Err == syscall.ENOENT {
-			return "", "", fmt.Errorf("Error: File '%s' not found.", info_file_path)
-		}
-		return "", "", fmt.Errorf("Error: Unable to read file '%s'.", info_file_path)
+		log.Fatal(err.Error())
 	}
+	secrets := *result.SecretString
 
-	var data map[string]interface{}
-	err = json.Unmarshal(file, &data)
+	var secret map[string]interface{}
+	err = json.Unmarshal([]byte(secrets), &secret)
 	if err != nil {
-		return "", "", err
+		fmt.Println("Failed to decode secret JSON:", err)
 	}
 
-	bot_token, ok := data["telegram_bot_token"].(string)
+	telegram_chat_id, ok := secret["telegram_chat_id"].(string)
 	if !ok {
-		return "", "", fmt.Errorf("Error: 'telegram_bot_token' not found in JSON data.")
+		fmt.Println("Failed to get telegram_chat_id from secret")
 	}
 
-	chat_id, ok := data["telegram_chat_id"].(string)
+	telegram_bot_token, ok := secret["telegram_bot_token"].(string)
 	if !ok {
-		return "", "", fmt.Errorf("Error: 'telegram_chat_id' not found in JSON data.")
+		fmt.Println("Failed to get telegram_bot_token from secret")
 	}
 
-	return bot_token, chat_id, nil
+	rapidAPI_api_key, ok := secret["rapidAPI_api_key"].(string)
+	if !ok {
+		fmt.Println("Failed to get rapidAPI_api_key from secret")
+	}
+
+	return telegram_bot_token, telegram_chat_id, rapidAPI_api_key
 }
 
-func telegram_bot_send_text(player_name string, info_file_path string) {
-	bot_token, chat_id, err := telegramKeys(info_file_path)
-	if err != nil {
-		log.Fatal(err)
-	}
-	chat_id_int, err := strconv.ParseInt(chat_id, 10, 64)
+func telegram_bot_send_text(message string, telegram_bot_token string, telegram_chat_id string) {
+
+	telegram_chat_id_int, err := strconv.ParseInt(telegram_chat_id, 10, 64)
 
 	// Create a new bot instance
-	bot, err := tgbotapi.NewBotAPI(bot_token)
+	bot, err := tgbotapi.NewBotAPI(telegram_bot_token)
 	if err != nil {
 		log.Fatal(err)
 	}
 
 	// Set up the message configuration
-	message := player_name + " is on strike!"
-	msg := tgbotapi.NewMessage(chat_id_int, message)
+	msg := tgbotapi.NewMessage(telegram_chat_id_int, message)
 
 	// Send the message
 	_, err = bot.Send(msg)
@@ -78,43 +88,55 @@ func telegram_bot_send_text(player_name string, info_file_path string) {
 	}
 }
 
+type MyEvent struct {
+	Name string `json:"name"`
+}
+
+func HandleRequest(ctx context.Context, name MyEvent) (string, error) {
+	return fmt.Sprintf("Hello%s!", name.Name), nil
+}
+
 func main() {
 
 	fixtures_url := "https://cricket-live-data.p.rapidapi.com/fixtures-by-date/"
 	live_score_url := "https://cricket-live-data.p.rapidapi.com/match/"
 	xRapidAPIHost := "cricket-live-data.p.rapidapi.com"
-	info_file_path := "config/info.json"
 	today_string := time.Now().Format("2006-01-02")
 	// today_string := "2023-05-19"
-	fixtures_data_path := "checkSchedule/fixtures.json"
-	live_score_data_path := "checkLiveScore/live_score.json"
+	fixtures_data_path := "/tmp/fixtures.json"
+	live_score_data_path := "/tmp/live_score.json"
 	ipl_series_id := 1430
 
-	// team_id := 145221
+	// team_id := 101742
 	team_id_str := os.Getenv("TEAM_ID")
 	team_id, err := strconv.Atoi(team_id_str)
 	if err != nil {
-		team_id = 145221
+		team_id = 101742
 	}
 
-	// player_id := 84717
+	// player_id := 84255
 	player_id_str := os.Getenv("PLAYER_ID")
 	player_id, err := strconv.Atoi(player_id_str)
 	if err != nil {
-		player_id = 84717
+		player_id = 84255
 	}
 
-	// player_name := "Shikhar Dhawan"
+	// player_name := "MS Dhoni"
+	// team_name := "Chennai Super Kings"
 	player_name := os.Getenv("PLAYER_NAME")
 	team_name := os.Getenv("TEAM_NAME")
 
+	// interval := 2
 	interval_str := os.Getenv("INTERVAL")
 	interval, err := strconv.Atoi(interval_str)
 	if err != nil {
 		interval = 300
 	}
 
-	checkSchedule.Get_schedule(fixtures_url, xRapidAPIHost, info_file_path, today_string, fixtures_data_path)
+	secret_name := os.Getenv("SECRET_NAME")
+	telegram_bot_token, telegram_chat_id, rapidAPI_api_key := get_secret(secret_name)
+
+	checkSchedule.Get_schedule(fixtures_url, xRapidAPIHost, rapidAPI_api_key, today_string, fixtures_data_path)
 
 	match_today, match_time_330, match_time_730, matchInfo, err := checkSchedule.Evaluate_schedule(fixtures_data_path, ipl_series_id, team_id, today_string)
 	if err != nil {
@@ -138,9 +160,9 @@ func main() {
 			for {
 				select {
 				case <-ticker.C:
-					checkLiveScore.Get_live_score(matchInfo, live_score_url, info_file_path, xRapidAPIHost, live_score_data_path)
+					checkLiveScore.Get_live_score(matchInfo, live_score_url, rapidAPI_api_key, xRapidAPIHost, live_score_data_path)
 					result := checkLiveScore.Is_batting(live_score_data_path, player_id)
-					print_status(result, player_name, team_name, info_file_path)
+					print_status(result, player_name, team_name, telegram_bot_token, telegram_chat_id)
 				}
 			}
 		}()
@@ -150,18 +172,12 @@ func main() {
 
 	} else {
 		fmt.Println("No " + team_name + "' match today!")
-		fmt.Println("player_name: ", player_name)
-		fmt.Println("team_name: ", team_name)
-		fmt.Println("player_id: ", player_id)
-		fmt.Println("team_id: ", team_id)
-		fmt.Println("match_time_330: ", match_time_330)
-		fmt.Println("match_time_730: ", match_time_730)
+		message := "No " + team_name + "' match today!"
+		telegram_bot_send_text(message, telegram_bot_token, telegram_chat_id)
 	}
 
-	fmt.Println("player_name: ", player_name)
-	fmt.Println("team_name: ", team_name)
-	fmt.Println("player_id: ", player_id)
-	fmt.Println("team_id: ", team_id)
+	lambda.Start(HandleRequest)
+
 	fmt.Println("match_time_330: ", match_time_330)
 	fmt.Println("match_time_730: ", match_time_730)
 }

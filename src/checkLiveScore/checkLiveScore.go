@@ -7,9 +7,7 @@ import (
 	"io/ioutil"
 	"log"
 	"net/http"
-	"os"
 	"src/checkSchedule"
-	"syscall"
 )
 
 // structs ///////////////////////////////////////////////////////////
@@ -31,47 +29,47 @@ type LiveScoreData struct {
 
 // helper functions /////////////////////////////////////////////////////////
 
-func readAPIKey(filePath string) (string, error) {
-	file, err := ioutil.ReadFile(filePath)
-	if err != nil {
-		if e, ok := err.(*os.PathError); ok && e.Err == syscall.ENOENT {
-			return "", fmt.Errorf("Error: File '%s' not found.", filePath)
-		}
-		return "", fmt.Errorf("Error: Unable to read file '%s'.", filePath)
-	}
+// func readAPIKey(filePath string) (string, error) {
+// 	file, err := ioutil.ReadFile(filePath)
+// 	if err != nil {
+// 		if e, ok := err.(*os.PathError); ok && e.Err == syscall.ENOENT {
+// 			return "", fmt.Errorf("Error: File '%s' not found.", filePath)
+// 		}
+// 		return "", fmt.Errorf("Error: Unable to read file '%s'.", filePath)
+// 	}
 
-	var data map[string]interface{}
-	err = json.Unmarshal(file, &data)
-	if err != nil {
-		return "", err
-	}
+// 	var data map[string]interface{}
+// 	err = json.Unmarshal(file, &data)
+// 	if err != nil {
+// 		return "", err
+// 	}
 
-	apiKey, ok := data["rapidAPI_api_key"].(string)
-	if !ok {
-		return "", fmt.Errorf("Error: 'rapidAPI_api_key' not found in JSON data.")
-	}
+// 	apiKey, ok := data["rapidAPI_api_key"].(string)
+// 	if !ok {
+// 		return "", fmt.Errorf("Error: 'rapidAPI_api_key' not found in JSON data.")
+// 	}
 
-	return apiKey, nil
-}
+// 	return apiKey, nil
+// }
 
 // logic functions /////////////////////////////////////////////////////////
 
 // get live score
-func Get_live_score(matchInfo checkSchedule.MatchInfo, url string, info_file_path string, xRapidAPIHost string, live_score_data_path string) {
+func Get_live_score(matchInfo checkSchedule.MatchInfo, url string, rapidAPI_api_key string, xRapidAPIHost string, live_score_data_path string) {
 	matchID := matchInfo.ID
 	url = fmt.Sprintf("%s%d", url, matchID)
 	// xRapidAPIKey := readAPIKey(infoFilePath)
-	xRapidAPIKey, err := readAPIKey(info_file_path)
-	if err != nil {
-		log.Fatal(err)
-	}
+	// xRapidAPIKey, err := readAPIKey(info_file_path)
+	// if err != nil {
+	// 	log.Fatal(err)
+	// }
 
 	req, err := http.NewRequest("GET", url, nil)
 	if err != nil {
 		fmt.Println("Error creating HTTP request:", err)
 		return
 	}
-	req.Header.Add("X-RapidAPI-Key", xRapidAPIKey)
+	req.Header.Add("X-RapidAPI-Key", rapidAPI_api_key)
 	req.Header.Add("X-RapidAPI-Host", xRapidAPIHost)
 
 	res, err := http.DefaultClient.Do(req)

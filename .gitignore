@@ -7,3 +7,4 @@ test1.py
 go.mod
 go.sum
 aws.txt
+test/

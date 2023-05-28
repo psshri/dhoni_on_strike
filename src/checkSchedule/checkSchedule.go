@@ -10,8 +10,6 @@ import (
 	"io/ioutil"
 	"log"
 	"net/http"
-	"os"
-	"syscall"
 )
 
 // structs //////////////////////////////////////////////////////////
@@ -43,37 +41,37 @@ type MatchData struct {
 
 // functions ////////////////////////////////////////////////////////
 
-func readAPIKey(filePath string) (string, error) {
-	file, err := ioutil.ReadFile(filePath)
-	if err != nil {
-		if e, ok := err.(*os.PathError); ok && e.Err == syscall.ENOENT {
-			return "", fmt.Errorf("Error: File '%s' not found.", filePath)
-		}
-		return "", fmt.Errorf("Error: Unable to read file '%s'.", filePath)
-	}
+// func readAPIKey(filePath string) (string, error) {
+// 	file, err := ioutil.ReadFile(filePath)
+// 	if err != nil {
+// 		if e, ok := err.(*os.PathError); ok && e.Err == syscall.ENOENT {
+// 			return "", fmt.Errorf("Error: File '%s' not found.", filePath)
+// 		}
+// 		return "", fmt.Errorf("Error: Unable to read file '%s'.", filePath)
+// 	}
 
-	var data map[string]interface{}
-	err = json.Unmarshal(file, &data)
-	if err != nil {
-		return "", err
-	}
+// 	var data map[string]interface{}
+// 	err = json.Unmarshal(file, &data)
+// 	if err != nil {
+// 		return "", err
+// 	}
 
-	apiKey, ok := data["rapidAPI_api_key"].(string)
-	if !ok {
-		return "", fmt.Errorf("Error: 'rapidAPI_api_key' not found in JSON data.")
-	}
+// 	apiKey, ok := data["rapidAPI_api_key"].(string)
+// 	if !ok {
+// 		return "", fmt.Errorf("Error: 'rapidAPI_api_key' not found in JSON data.")
+// 	}
 
-	return apiKey, nil
-}
+// 	return apiKey, nil
+// }
 
 //////////////////////////////////////////////////////////////////////////
 
 // get today's match schedule
-func Get_schedule(url string, xRapidAPIHost string, info_file_path string, today_string string, fixtures_data_path string) {
-	xRapidAPIKey, err := readAPIKey(info_file_path)
-	if err != nil {
-		log.Fatal(err)
-	}
+func Get_schedule(url string, xRapidAPIHost string, rapidAPI_api_key string, today_string string, fixtures_data_path string) {
+	// xRapidAPIKey, err := readAPIKey(info_file_path)
+	// if err != nil {
+	// 	log.Fatal(err)
+	// }
 
 	url = url + today_string
 	req, err := http.NewRequest("GET", url, nil)
@@ -81,7 +79,7 @@ func Get_schedule(url string, xRapidAPIHost string, info_file_path string, today
 		log.Fatal(err)
 	}
 
-	req.Header.Add("X-RapidAPI-Key", xRapidAPIKey)
+	req.Header.Add("X-RapidAPI-Key", rapidAPI_api_key)
 	req.Header.Add("X-RapidAPI-Host", xRapidAPIHost)
 
 	res, err := http.DefaultClient.Do(req)
