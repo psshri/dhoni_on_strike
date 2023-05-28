@@ -15,3 +15,4 @@ $ docker build -t dhoni_on_strike:golang-v1.0 .
 * Use Amazon SNS for notification instead of Telegram
 * Store the src/checkLiveScore/live_score.json and src/checkSchedule/fixtures.json in an S3 bucket instead of /tmp directory within the image
 * Create Lambda function, Secret, ECR repo using Terraform/AWS SDK
+* Create CI/CD pipeline using GitHub Actions
