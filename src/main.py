@@ -111,8 +111,8 @@ def main():
     if match_today == 1:
 
         print(team_name + "' match is today!")
-        message = team_name + "' match is today\\!"
-        telegram_bot_send_text(message, telegram_bot_token, telegram_chat_id)
+        # message = team_name + "' match is today\\!"
+        # telegram_bot_send_text(message, telegram_bot_token, telegram_chat_id)
 
         schedule.every(interval).seconds.do(get_live_score, match_info=match_info,
                                     url=live_score_url,
