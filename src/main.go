@@ -84,8 +84,8 @@ func main() {
 	live_score_url := "https://cricket-live-data.p.rapidapi.com/match/"
 	xRapidAPIHost := "cricket-live-data.p.rapidapi.com"
 	info_file_path := "config/info.json"
-	// today_string := time.Now().Format("2006-01-02")
-	today_string := "2023-05-19"
+	today_string := time.Now().Format("2006-01-02")
+	// today_string := "2023-05-19"
 	fixtures_data_path := "checkSchedule/fixtures.json"
 	live_score_data_path := "checkLiveScore/live_score.json"
 	ipl_series_id := 1430
