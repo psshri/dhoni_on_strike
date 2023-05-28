@@ -95,6 +95,8 @@ def print_status(counter):
 
     else:
         print(team_name +"'" + " match is today, " + player_name + " is yet to bat!")
+        # message = team_name +"'" + " match is today, " + player_name + " is yet to bat\\!"
+        # telegram_bot_send_text(message, telegram_bot_token, telegram_chat_id)
     print("\n")
 
 # function calls ###################################################
