@@ -123,3 +123,6 @@ go get github.com/aws/aws-sdk-go/aws/session
 go get github.com/aws/aws-sdk-go/service/secretsmanager
 
 run the above commands to get the go sdk installed locally
+
+### refactoring the code wrt handler function
+go get github.com/aws/aws-lambda-go/lambda

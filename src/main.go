@@ -1,6 +1,7 @@
 package main
 
 import (
+	"context"
 	"encoding/json"
 	"fmt"
 	"log"
@@ -12,6 +13,7 @@ import (
 
 	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api"
 
+	"github.com/aws/aws-lambda-go/lambda"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/secretsmanager"
@@ -41,7 +43,6 @@ func get_secret(secret_name string) (string, string, string) {
 		log.Fatal(err.Error())
 	}
 	secrets := *result.SecretString
-	// fmt.Println(reflect.TypeOf(secrets))
 
 	var secret map[string]interface{}
 	err = json.Unmarshal([]byte(secrets), &secret)
@@ -64,47 +65,12 @@ func get_secret(secret_name string) (string, string, string) {
 		fmt.Println("Failed to get rapidAPI_api_key from secret")
 	}
 
-	// return telegram_bot_token, telegram_chat_id, rapidAPI_api_key
 	return telegram_bot_token, telegram_chat_id, rapidAPI_api_key
 }
 
-// func telegramKeys(info_file_path string) (string, string, error) {
-// 	file, err := ioutil.ReadFile(info_file_path)
-// 	if err != nil {
-// 		if e, ok := err.(*os.PathError); ok && e.Err == syscall.ENOENT {
-// 			return "", "", fmt.Errorf("Error: File '%s' not found.", info_file_path)
-// 		}
-// 		return "", "", fmt.Errorf("Error: Unable to read file '%s'.", info_file_path)
-// 	}
-
-// 	var data map[string]interface{}
-// 	err = json.Unmarshal(file, &data)
-// 	if err != nil {
-// 		return "", "", err
-// 	}
-
-// 	bot_token, ok := data["telegram_bot_token"].(string)
-// 	if !ok {
-// 		return "", "", fmt.Errorf("Error: 'telegram_bot_token' not found in JSON data.")
-// 	}
-
-// 	chat_id, ok := data["telegram_chat_id"].(string)
-// 	if !ok {
-// 		return "", "", fmt.Errorf("Error: 'telegram_chat_id' not found in JSON data.")
-// 	}
-
-// 	return bot_token, chat_id, nil
-// }
-
 func telegram_bot_send_text(message string, telegram_bot_token string, telegram_chat_id string) {
-	// bot_token, chat_id, err := telegramKeys(info_file_path)
-	// if err != nil {
-	// 	log.Fatal(err)
-	// }
+
 	telegram_chat_id_int, err := strconv.ParseInt(telegram_chat_id, 10, 64)
-	// telegram_chat_id_int, err := strconv.Atoi(telegram_chat_id)
-	// fmt.Println(telegram_chat_id_int)
-	// fmt.Println(telegram_chat_id)
 
 	// Create a new bot instance
 	bot, err := tgbotapi.NewBotAPI(telegram_bot_token)
@@ -113,7 +79,6 @@ func telegram_bot_send_text(message string, telegram_bot_token string, telegram_
 	}
 
 	// Set up the message configuration
-	// message := player_name + " is on strike!"
 	msg := tgbotapi.NewMessage(telegram_chat_id_int, message)
 
 	// Send the message
@@ -123,12 +88,19 @@ func telegram_bot_send_text(message string, telegram_bot_token string, telegram_
 	}
 }
 
+type MyEvent struct {
+	Name string `json:"name"`
+}
+
+func HandleRequest(ctx context.Context, name MyEvent) (string, error) {
+	return fmt.Sprintf("Hello%s!", name.Name), nil
+}
+
 func main() {
 
 	fixtures_url := "https://cricket-live-data.p.rapidapi.com/fixtures-by-date/"
 	live_score_url := "https://cricket-live-data.p.rapidapi.com/match/"
 	xRapidAPIHost := "cricket-live-data.p.rapidapi.com"
-	// info_file_path := "config/info.json"
 	today_string := time.Now().Format("2006-01-02")
 	// today_string := "2023-05-19"
 	fixtures_data_path := "/tmp/fixtures.json"
@@ -161,7 +133,6 @@ func main() {
 		interval = 300
 	}
 
-	// secret_name := "dhoni_on_strike"
 	secret_name := os.Getenv("SECRET_NAME")
 	telegram_bot_token, telegram_chat_id, rapidAPI_api_key := get_secret(secret_name)
 
@@ -205,10 +176,8 @@ func main() {
 		telegram_bot_send_text(message, telegram_bot_token, telegram_chat_id)
 	}
 
-	// fmt.Println("player_name: ", player_name)
-	// fmt.Println("team_name: ", team_name)
-	// fmt.Println("player_id: ", player_id)
-	// fmt.Println("team_id: ", team_id)
+	lambda.Start(HandleRequest)
+
 	fmt.Println("match_time_330: ", match_time_330)
 	fmt.Println("match_time_730: ", match_time_730)
 }
