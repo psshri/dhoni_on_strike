@@ -102,11 +102,11 @@ def main():
     secret_name = os.environ.get('SECRET_NAME')
     telegram_chat_id, telegram_bot_token, rapidAPI_api_key = get_secret(secret_name)
 
-    fixture_data_path = "/tmp/fixtures.json"
+    fixtures_data_path = "/tmp/fixtures.json"
     live_score_data_path = "/tmp/live_score.json"
 
-    get_schedule(fixtures_url, X_RapidAPI_Host, rapidAPI_api_key, today_string, fixture_data_path)
-    match_today, match_time_730, match_time_330, match_info = evaluate_schedule(fixture_data_path, ipl_series_id, team_id, today_string)
+    get_schedule(fixtures_url, X_RapidAPI_Host, rapidAPI_api_key, today_string, fixtures_data_path)
+    match_today, match_time_730, match_time_330, match_info = evaluate_schedule(fixtures_data_path, ipl_series_id, team_id, today_string)
 
     if match_today == 1:
 
