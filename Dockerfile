@@ -15,6 +15,9 @@ RUN go mod init src
 
 # install the necessary dependencies
 RUN go get -d -v github.com/go-telegram-bot-api/telegram-bot-api
+RUN go get github.com/aws/aws-sdk-go/aws
+RUN go get github.com/aws/aws-sdk-go/aws/session
+RUN go get github.com/aws/aws-sdk-go/service/secretsmanager
 
 # build the go application
 RUN go build -o main main.go

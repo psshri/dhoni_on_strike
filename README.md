@@ -115,3 +115,11 @@ docker pull psshri/dhoni_on_strike:golang-v1.0
 
 error:
 this setup works well in cka killershell, identify whats the issue here
+
+
+### aws secrets manager 
+go get github.com/aws/aws-sdk-go/aws
+go get github.com/aws/aws-sdk-go/aws/session
+go get github.com/aws/aws-sdk-go/service/secretsmanager
+
+run the above commands to get the go sdk installed locally
