@@ -116,3 +116,7 @@ lambda fn > configuration > general configuration > edit timeout
 - modify the python code to read secrets from secrets manager secret_name
 - create img, push, import it into lambda
 - grant the lambda with permission to read the secret from secrets manager
+
+
+### issue
+- the container in aws lambda function, keeps on executing, ek baar execute hoke band nahi ho raha hai

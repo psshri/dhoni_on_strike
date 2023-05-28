@@ -17,10 +17,10 @@ COPY src/checkSchedule/checkSchedule.py checkSchedule/
 COPY src/main.py .
 
 # set the default values for environment variables
-ENV PLAYER_ID=84717
-ENV TEAM_ID=145221
-ENV PLAYER_NAME="Shikhar Dhawan"
-ENV TEAM_NAME="Punjab Kings"
+ENV PLAYER_ID=84255
+ENV TEAM_ID=101742
+ENV PLAYER_NAME="MS Dhoni"
+ENV TEAM_NAME="Chennai Super Kings"
 ENV INTERVAL=2
 ENV SECRET_NAME="dhoni_on_strike"
 
